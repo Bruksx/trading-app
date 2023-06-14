@@ -1,0 +1,159 @@
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 85vh;
+  }
+  
+  .swiper-wrapper{
+     background:  rgb(68 64 60);
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically 
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+  }
+
+  .second-showcase{
+    padding: 60px; 
+  }
+
+  .grd{
+    background: #212224;
+  }
+
+  .sec-showcase{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    
+  }
+  
+.swiper-slide img {
+    display: block;
+    width: 86%;
+    height: 86%;
+    object-fit: cover;
+}
+
+.swiper-button-next::after{
+    color: white;
+}
+
+.swiper-button-prev::after{
+    color: white;
+}
+
+.contner{
+    position: relative; 
+}
+
+.spread{
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+  
+/* Dropdown Styles */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content {
+    min-width: 160px;
+  }
+  
+  .dropdown-content li {
+    padding: 8px 16px;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Hide the dropdown by default */
+  .dropdown-content {
+    display: none;
+  }
+  
+  /* Position the dropdown content */
+  .dropdown-content.absolute {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .third-container{
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 55%, rgb(255, 239, 236) 100%);
+  }
+
+  .third-container .first-flex{
+    display: flex;
+}
+
+.third-container .first-flex .first-flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.third-container .first-flex .first-flex-container .text-blurb{
+    margin-left: 10px;
+}
+
+.third-container .first-flex .first-flex-container .text-blurb h1{
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+.third-container .first-flex .first-flex-container .text-blurb p{
+    padding-bottom: 10px;
+    font-size: 17px;
+    width: 75%;
+    color: #707070;
+}
+
+.third-container .first-flex .first-flex-container .text-blurb button{
+    padding-top: 10px;
+    color: #707070c7;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.third-container .first-flex .first-flex-container .text-blurb button:hover{
+   border-bottom: 2px solid #707070;
+   color: #707070;
+   transition: 0.4s solid ease-in-out;
+}
