@@ -178,6 +178,7 @@
 
 .bgg{
   background-image:url('/in-team-background-1.png');
+  background: rgba(233, 233, 233, 0.808);
 }
 
 .blg{
@@ -191,6 +192,11 @@
 
 .oko{
   width: 50px!important;
+}
+
+.lst{
+  margin-top: 80px;
+  margin-bottom: 70px;
 }
 
 .logo{
