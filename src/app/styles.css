@@ -188,3 +188,57 @@
 .oko{
   width: 50px!important;
 }
+
+.logo{
+  width: 70px;
+  height: 70px;
+}
+
+.custom-container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  background-color: rgba(26, 26, 26, 0.8);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+
+.company-name{
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8a8a8;;
+}
+
+.nav > a:hover{
+  color: white;
+}
+
+.custom-button{
+  height: 40px;
+  background-color: #FC5B3F;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.border-orange{
+  border-color: #FC5B3F;
+}
