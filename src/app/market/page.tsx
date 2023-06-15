@@ -52,7 +52,7 @@ export default function Market() {
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Investing</p>
         <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       </div>
-      <div className="grd-mkt bg-blue-500 bg-white p-4 shadow-md rounded">
+      <div className="grd-mkt bg-blue-500 bg-blue-400 p-4 shadow-md rounded">
         <img
           src="/in-liquid-object-2.svg"
           alt="Card 2"
