@@ -157,3 +157,30 @@
    color: #707070;
    transition: 0.4s solid ease-in-out;
 }
+
+.rect{
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.circ{
+  margin: auto;
+  padding-top: 20px;
+}
+
+.bgh{
+  background-image:url('/in-liquid-3-bg.png');
+}
+
+.blg{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.bg-money{
+  background-image:url('/in-liquid-5-bg.png');
+}
+
+.oko{
+  width: 50px!important;
+}
