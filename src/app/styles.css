@@ -270,3 +270,7 @@
   display: flex;
   align-items: center;
 }
+
+.core{
+  margin: auto;
+}
