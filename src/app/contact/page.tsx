@@ -1,34 +1,55 @@
 import Image from 'next/image';
+import {BsPersonCircle} from "react-icons/bs"
 import "../styles.css";
 
 export default function Market() {
   return (
     <main className="min-h-screen justify-between">
-      <header className="bg-stone-700 text-white sticky top-0 z-50 ">
-  <div className="container mx-auto flex items-center justify-between py-4 px-8">
-    <div className="flex items-center">
-      <img src="/logo.png" alt="Logo" className="h-12 mr-4" />
-    </div>
-    <nav className="space-x-4">
-      <a href="#" className="hover:text-neutral-400">Home</a>
-      <a href="#" className="hover:text-neutral-400">Markets</a>
-      <div className="dropdown inline-block relative">
-        <button className="hover:text-neutral-400">Company</button>
-        <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
-      <a href="#" className="hover:text-neutral-400">Education</a>
-      <a href="#" className="hover:text-neutral-400">Resources</a>
-    </nav>
-    <button className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded">
-      <a href="/register">CREATE ACCOUNT</a>
-    </button>
-  </div>
-</header>
+         <header className="header">
+        <div className="custom-container">
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Logo" className="h-12 mr-4 logo" />
+            <p className="company-name">LarvaTrade</p>
+          </div>
+          <nav className="space-x-4 nav">
+            <a href="#" className="hover:text-neutral-400">
+              Home
+            </a>
+            <a href="#" className="hover:text-neutral-400">
+              Markets
+            </a>
+            <div className="dropdown inline-block relative">
+              <button className="hover:text-neutral-400">Company</button>
+              <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" className="hover:text-neutral-400">
+              Education
+            </a>
+            <a href="#" className="hover:text-neutral-400">
+              Resources
+            </a>
+          </nav>
+          <button className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded custom-button">
+            <a href="/register">CREATE ACCOUNT</a>
+          </button>
+          <a href="/login">
+            <BsPersonCircle color="#FC5B3F" size={20}/>
+          </a>
+        </div>
+      </header>
 
 <section>
 <div className='text-center mx-auto container px-8 py-8'>
