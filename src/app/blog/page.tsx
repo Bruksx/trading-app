@@ -2,16 +2,7 @@ import Image from 'next/image';
 import {BsPersonCircle} from "react-icons/bs"
 import "../styles.css";
 
-export default function Market() {
-
-const images = [
-    'in-gallery-image-1 - Copy.jpg',
-    'in-gallery-image-2 - Copy.jpg',
-    'in-gallery-image-3 - Copy.jpg',
-    'in-gallery-image-4 - Copy.jpg',
-    'in-gallery-image-5 - Copy.jpg',
-    'in-gallery-image-6 - Copy.jpg',
-    ];
+export default function Blog() {
 
       
   return (
@@ -143,27 +134,25 @@ const images = [
                 <div className="blog-news">
                     <h1 className='text-black font-bold text-1xl mb-6 cat-h1'>Latest news</h1>
                     <div className="ltst">
-                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..
+                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..</p>
                         <p className='text-gray-400 pt-2'>December 29, 2022</p>
-                        </p>
                         
                     </div>
                     <div className="ltst">
-                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..
+                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..</p>
                         <p className='text-gray-400 pt-2'>December 29, 2022</p>
-                        </p>
-                        
+                      
                     </div>
                     <div className="ltst">
-                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..
+                        <p className='hover:text-red-500 text-1xl mb-5 pb-5 border-b border-300-gray cursor-pointer'>The typical U.S. household is spending $445 more a month ..</p>
                         <p className='text-gray-400 pt-2'>December 29, 2022</p>
-                        </p>
+                        
                         
                     </div>
                 </div>
 
                 <div className="blog-tag">
-                <h1 className='text-black font-bold text-1xl mb-6 cat-h1'>Tag</h1>
+                    <h1 className='text-black font-bold text-1xl mb-6 cat-h1'>Tag</h1>
                     <div className="btn-flex">
                     <button className='plt a'>#biden</button>
                     <button className='plt a'>#diet</button>
