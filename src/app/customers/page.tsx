@@ -167,7 +167,7 @@ export default function Customers() {
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
-      <h1 className='text-gray-500 mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
             <div className="ctgry mt-12">
               <div>
                 <p className='mt-3 font-bold text-lg text-black'>Melvin Cortez</p>
@@ -180,7 +180,7 @@ export default function Customers() {
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
-      <h1 className='text-gray-500 mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
             <div className="ctgry mt-12">
               <div>
                 <p className='mt-3 font-bold text-lg text-black'>Melvin Cortez</p>

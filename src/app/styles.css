@@ -354,6 +354,23 @@
   margin-bottom: 30px;
 }
 
+.blog-categories.a{
+  background-color: #fff;
+  border: 1px solid gainsboro;
+}
+
+.blog-categories.global{
+  background-color: #fff;
+  border: 1px solid gainsboro;
+  height: 65vh;
+}
+
+.blog-categories.globl{
+  background-color: #fff;
+  border: 1px solid gainsboro;
+  height: 85vh;
+}
+
 .blog-flex-second{
   margin-left: 40px;
 }
@@ -364,6 +381,10 @@
   justify-content: space-between;
   padding-right: 20px;
   padding-bottom: 10px;
+}
+
+.ctgry.i{
+  flex-direction: column;
 }
 
 .ctg{
