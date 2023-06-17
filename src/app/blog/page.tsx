@@ -40,9 +40,17 @@ export default function Blog() {
             <a href="#" className="hover:text-neutral-400">
               Education
             </a>
-            <a href="#" className="hover:text-neutral-400">
-              Resources
-            </a>
+            <div className="dropdown inline-block relative">
+            <button className="hover:text-neutral-400">Resources</button>
+              <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
+                <li>
+                  <a href="#">Customers</a>
+                </li>
+                <li>
+                  <a href="#">Roadmap</a>
+                </li>
+              </ul>
+            </div>
           </nav>
           <button className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded custom-button">
             <a href="/register">CREATE ACCOUNT</a>

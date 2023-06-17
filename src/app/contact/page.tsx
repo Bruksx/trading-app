@@ -2,7 +2,7 @@ import Image from 'next/image';
 import {BsPersonCircle} from "react-icons/bs"
 import "../styles.css";
 
-export default function Market() {
+export default function Contact() {
   return (
     <main className="min-h-screen justify-between">
          <header className="header">
