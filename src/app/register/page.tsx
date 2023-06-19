@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const LoginPage = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="bg-black flex flex-col md:flex-row h-screen">
       <div className="md:w-2/3 bg-gray-300 flex items-center justify-center">
       <img
           src="/chart.jpg"
