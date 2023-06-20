@@ -217,14 +217,25 @@
 }
 
 .header{
-  background-color:rgba(51, 0, 0, 0.2);
-  position: fixed;
+  background-color:rgba(33, 34, 36, 0.8);
+  position: sticky;
   top: 0px;
   width: 100%;
   z-index: 10;
   display: flex;
   justify-content: center;
   height: 80px;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.header-down{
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .company-name{
@@ -449,4 +460,6 @@
    margin-top: 35px;
  }
 
- 
+.carousel-section{
+  background-color: #212224;
+}
