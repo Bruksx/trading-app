@@ -217,7 +217,7 @@
 }
 
 .header{
-  background-color:rgba(33, 34, 36, 0.8);
+  background-color:rgba(33, 34, 36, 0.7);
   position: sticky;
   top: 0px;
   width: 100%;
@@ -229,8 +229,17 @@
   opacity: 1;
 }
 
+.header-down{
+  opacity: 0;
+  transition: 0.5s;
+}
+
 .fixed{
   position: fixed;
+}
+
+.carousel-section{
+  background-color: #212224;
 }
 
 .header-down{
