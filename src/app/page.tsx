@@ -11,7 +11,7 @@ import {BsPersonCircle} from "react-icons/bs"
 export default function Home() {
   return (
     <main className="min-h-screen justify-between">
-      <Header/>
+      <Header fixed/>
       <Carousel />
       <div className="second-showcase flex justify-between bg-black px-20px">
         <div>
