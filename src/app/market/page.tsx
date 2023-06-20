@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import "../styles.css";
 import Header from '../header';
+import Footer from '../Footer'
 
 export default function Market() {
   return (
@@ -11,11 +12,11 @@ export default function Market() {
 
 <div className="second-showcase flex justify-between bg-white px-20px">
       <div>
-        <p className="text-4xl font-bold text-black">
+        <p className="heading-txt text-4xl font-bold text-black">
         A <span className='text-red-400'>relationship</span> on your terms.
         </p>
         <p className='text-gray-400 text-lg mt-2'>Work with us the way you want.</p>
-        <p className='text-gray-400 mt-4 '>Some believe you must choose between an online broker and a wealth management firm. At Liquid, you don’t need to compromise. Whether you invest on your own, with an advisor, or a little of both — we can support you.</p>
+        <p className=' heading-p text-gray-400 mt-4 '>Some believe you must choose between an online broker and a wealth management firm. At Liquid, you don’t need to compromise. Whether you invest on your own, with an advisor, or a little of both — we can support you.</p>
       </div>
       <div>
       </div>
@@ -88,19 +89,19 @@ export default function Market() {
           <img
             src="/in-liquid-object-1.svg"
             alt="Small Image"
-            className="w-40 h-40 mr-2"
+            className="hide-img w-40 h-40 mr-2"
           />
           <div className='px-30'>
-            <h2 className="text-3xl font-bold">Why trade with Liquid?</h2>
-            <p className="text-gray-500 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation repudiandae ullamco.</p>
+            <h2 className="heading-txt text-3xl font-bold">Why trade with Liquid?</h2>
+            <p className="heading-p text-gray-500 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation repudiandae ullamco.</p>
             <div className="flex justify-left mt-4">
-          <ul>
+          <ul className='hide-table'>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>Direct Market Access (DMA)</a></li>
             <li className='my-4'><a href="#"  className='text-gray-500 my-8'>Leverage up to 1:500</a></li>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>T+0 settlement</a></li>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>Dividends paid in cash</a></li>
           </ul>
-          <ul className='ml-5'>
+          <ul className='hide-table ml-5'>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>Free from UK Stamp Duty</a></li>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>Short selling available</a></li>
             <li className='my-4'><a href="#" className='text-gray-500 my-8'>Commissions from 0.08%</a></li>
@@ -115,8 +116,8 @@ export default function Market() {
       {/* Second side */}
       <div className="w-full md:w-1/2 p-4">
         <div>
-          <h2 className="text-2xl font-bold">Our Shares offer</h2>
-          <table className="mt-4">
+          <h2 className="heading-txt mg-b text-2xl font-bold">Our Shares offer</h2>
+          <table className="table-center mt-4 pt-10">
             <thead>
               <tr>
                 <th className="bg-gray-300 px-4 py-4 border-r border-gray-200">Name</th>
@@ -144,32 +145,18 @@ export default function Market() {
 
     <div className="second-showcase flex justify-between bg-gray-200 px-20px">
       <div>
-        <p className="text-2xl font-bold text-black">
+        <p className="heading-20 text-2xl font-bold text-black">
         Get up to $600 plus 60 days of commission-free stocks & forex trades
 
         </p>
       </div>
       <div>
-        <button className="bg-transparent-500 hover:bg-gray-300 text-black font-bold py-3 px-8 border border-black border-solid rounded">
+        <button className="btn-hide bg-transparent-500 hover:bg-gray-300 text-black font-bold py-3 px-8 border border-black border-solid rounded">
           Open an account
         </button>
       </div>
     </div>
-
-
-<footer className="bg-stone-700 py-4">
-  <div className="container mx-auto flex items-center justify-between">
-    <img src="/logo.png" alt="Company Logo" className=" h-16" />
-    <div className="space-x-4">
-      <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Company news</button>
-      <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Partnership</button>
-    </div>
-  </div>
-
-  <div className='container mx-auto py-10 text-gray-200'>Copyright ©2021 Liquid Inc. All Rights Reserved.</div>
-  <div className='container mx-auto py-5 text-gray-200'>Trading derivatives and leveraged products carries a high level of risk, including the risk of losing substantially more than your initial investment. It is not suitable for everyone. Before you make any decision in relation to a financial product you should obtain and consider our Product Disclosure Statement (PDS) and Financial Services Guide (FSG) available on our website and seek independent advice if necessary</div>
-
-</footer>
+    <Footer/>
 </main>
   )
 }
