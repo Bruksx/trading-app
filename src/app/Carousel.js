@@ -17,7 +17,7 @@ export default function App() {
     <>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-            <section className="bg-stone-700">
+            <section className="bg-stone-700 carousel-section">
             <div className="contner">
             <img src="/in-liquid-slide-bg.png" alt="Wave Background" className="spread" />
             <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-center py-8 lg:py-16">
