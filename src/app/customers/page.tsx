@@ -3,6 +3,8 @@ import Image from 'next/image';
 import {BsPersonCircle} from "react-icons/bs"
 import "../styles.css";
 import React, { useEffect, useState } from 'react';
+import Header from '../header';
+import Footer from "../Footer";
 
 export default function Customers() {
     const [count, setCount] = useState(0);
@@ -30,72 +32,19 @@ export default function Customers() {
   }, [count]);
   return (
     <main className="min-h-screen justify-between">
-               <header className="header">
-        <div className="custom-container">
-          <div className="flex items-center">
-            <img src="/logo.png" alt="Logo" className="h-12 mr-4 logo" />
-            <p className="company-name">LarvaTrade</p>
-          </div>
-          <nav className="space-x-4 nav">
-            <a href="#" className="hover:text-neutral-400">
-              Home
-            </a>
-            <a href="#" className="hover:text-neutral-400">
-              Markets
-            </a>
-            <div className="dropdown inline-block relative">
-              <button className="hover:text-neutral-400">Company</button>
-              <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
-                </li>
-              </ul>
-            </div>
-            <a href="#" className="hover:text-neutral-400">
-              Education
-            </a>
-            <div className="dropdown inline-block relative">
-            <button className="hover:text-neutral-400">Resources</button>
-              <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
-                <li>
-                  <a href="#">Customers</a>
-                </li>
-                <li>
-                  <a href="#">Roadmap</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <button className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded custom-button">
-            <a href="/register">CREATE ACCOUNT</a>
-          </button>
-          <a href="/login">
-            <BsPersonCircle color="#FC5B3F" size={20}/>
-          </a>
-        </div>
-      </header>
-    
+      <Header/>
       <div className="flex justify-center items-center max-w-2xl container mx-auto ">
       <div className="lrt flex justify-evenly items-start">
         <div className="max-w-6xl mr-50 rounded-lg p-8">
           <div className="mb-4">
-            <h1 className="text-3xl font-bold pt-3">
+            <h1 className="heading-txt text-3xl font-bold pt-3">
               We <span className="text-red-500">help</span> our customers.
             </h1>
-            <h2 className="text-2xl text-gray-400 py-3">
+            <h2 className="ivest-p text-2xl text-gray-400 py-3">
               To engage investors so their companies can grow
             </h2>
           </div>
-          <p className="text-400-gray">
+          <p className=" text-400-gray">
             Our customers look to us as guides, and we weave our deep legal and technical experience into our software and
             services.
           </p>
@@ -118,7 +67,7 @@ export default function Customers() {
     </div>
 
     <div className="section-flex-customers container mx-auto">
-    <div className="blog-categories w-2/4 container mx-auto shadow shadow-lg hover:shadow-lg">
+    <div className="blog-categories test-mobile w-2/4 container mx-auto shadow shadow-lg hover:shadow-lg">
                     <h1 className='text-gray-500 text-lg mb-6 cat-h1'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
                         <div className="ctgry mt-12">
                           <div>
@@ -132,7 +81,7 @@ export default function Customers() {
 
                         </div>
         </div>
-        <div className="blog-categories w-2/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
+        <div className="blog-categories test-mobile-this w-2/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
                     <h1 className='text-gray-500 text-lg mb-6 cat-h1'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
                         <div className="ctgry mt-12">
                           <div>
@@ -150,7 +99,7 @@ export default function Customers() {
 
     <div className="second-flex-2">
       
-    <div className="blog-categories w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
+    <div className="blog-categories card-flex w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
@@ -163,7 +112,7 @@ export default function Customers() {
           </div>
         </div>
 
-        <div className="blog-categories w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
+        <div className="blog-categories card-flex w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
@@ -176,7 +125,7 @@ export default function Customers() {
           </div>
         </div>
 
-        <div className="blog-categories w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
+        <div className="blog-categories card-flex w-1/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
@@ -190,21 +139,7 @@ export default function Customers() {
         </div>
 
     </div>
-
-
-<footer className="bg-stone-700 py-4">
-  <div className="container mx-auto flex items-center justify-between">
-    <img src="/logo.png" alt="Company Logo" className=" h-16" />
-    <div className="space-x-4">
-      <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Company news</button>
-      <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Partnership</button>
-    </div>
-  </div>
-
-  <div className='container mx-auto py-10 text-gray-200'>Copyright ©2021 Liquid Inc. All Rights Reserved.</div>
-  <div className='container mx-auto py-5 text-gray-200'>Trading derivatives and leveraged products carries a high level of risk, including the risk of losing substantially more than your initial investment. It is not suitable for everyone. Before you make any decision in relation to a financial product you should obtain and consider our Product Disclosure Statement (PDS) and Financial Services Guide (FSG) available on our website and seek independent advice if necessary</div>
-
-</footer>
+    <Footer/>
 </main>
   )
 }

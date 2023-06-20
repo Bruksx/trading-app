@@ -727,6 +727,7 @@
 
 .edu{
   padding-left: 20px;
+  flex-direction: column;
 }
 
 .scnd-1{
@@ -736,6 +737,103 @@
 .grid-box{
   width:90%;
   margin: auto;
+}
+
+.gap-left{
+  padding-left: 30px;
+}
+
+.feature-grid{
+  grid-template-columns: 1fr;
+}
+
+.space-btn{
+  margin-bottom: 22px;
+}
+
+.p-space{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+  width: 80%;
+}
+
+.blog-flex{
+  flex-direction: column;
+}
+
+.blog-flex-second{
+  margin-top: 30px;
+}
+
+.search-btn{
+  display: none;
+}
+
+.plt.a{
+  width: 100%;
+}
+
+.pic-blog{
+  width: 40px;
+  height: 40px;
+}
+
+.edu-flex{
+  flex-direction: column;
+}
+
+.edu-text{
+   width: 100%;
+}
+
+.full-sect{
+  width: 100%;
+}
+
+.blog-flex-second{
+  margin-left: unset;
+}
+
+.pic{
+  width: 90%;
+  margin: auto;
+}
+
+.hide-txt{
+  display: none!important;
+}
+
+.lrt{
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.ivest-p{
+  font-size: 19px;
+}
+
+.section-flex-customers{
+  flex-direction: column;
+}
+
+.test-mobile{
+  width: 100%;
+  margin-left: unset;
+}
+
+.test-mobile-this{
+  width: 100%;
+  margin: auto;
+}
+
+.second-flex-2{
+  flex-direction: column;
+}
+
+.card-flex{
+  width: 100%;
+  margin-left: unset;
 }
 
 }

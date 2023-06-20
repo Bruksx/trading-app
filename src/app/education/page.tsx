@@ -2,21 +2,22 @@
 import Image from 'next/image';
 import "../styles.css";
 import Header from '../header';
+import Footer from "../Footer"
 
 export default function Education() {
   return (
     <main className="min-h-screen justify-between">
       <Header/>
-      <div className="flex">
-            <div className="w-1/2 bg-white p-8">
-              <h1 className="text-4xl font-bold mb-6"><span  className="text-red-400">Knowledge</span> is a wise investment.</h1>
-              <p className=" text-gray-400 text-2xl mb-6 py-8">By combining easy-to-understand information with actionable insights, Our company helps make the market seem less daunting and more approachable.</p>
+      <div className="edu-flex flex">
+            <div className="edu-text w-1/2 bg-white p-8">
+              <h1 className="heading-txt text-4xl font-bold mb-6"><span  className="text-red-400">Knowledge</span> is a wise investment.</h1>
+              <p className="heading-p text-gray-400 text-2xl mb-6 py-8">By combining easy-to-understand information with actionable insights, Our company helps make the market seem less daunting and more approachable.</p>
               <button className="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Learn</button>
             </div>
-            <div className="w-2/5 bg-gray-100 shadow p-8 flex items-center mt-5 mb-5">
+            <div className="full-sect w-2/5 bg-gray-100 shadow p-8 flex items-center mt-5 mb-5">
               <div>
-                <h1 className="text-2xl font-bold mb-4">Trader Academy</h1>
-                <p className="text-gray-600 mb-4">Reprehenderit in voluptate velit esse cillum dolore laboris.</p>
+                <h1 className="heading-txt text-2xl font-bold mb-4">Trader Academy</h1>
+                <p className="heading-p text-gray-600 mb-4">Reprehenderit in voluptate velit esse cillum dolore laboris.</p>
                 <button className="bg-transparent text-gray-400  py-2  rounded">Start Learning</button>
               </div>
               <img src="/in-liquid-object-2.svg" alt="Image" className="ml-4 w-2/5" />
@@ -34,7 +35,7 @@ export default function Education() {
           </div>
 
           <div className="second-grid">
-              <p className='text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
+              <p className='p-space text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
           </div>
 
           <div className="third-grid">
@@ -54,7 +55,7 @@ export default function Education() {
           </div>
 
           <div className="second-grid">
-              <p className='text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
+              <p className='p-space text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
           </div>
 
           <div className="third-grid">
@@ -73,7 +74,7 @@ export default function Education() {
           </div>
 
           <div className="second-grid">
-              <p className='text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
+              <p className='p-space text-1xl text-gray-500'>Learn the basic concepts of forex trading, what this market is all about, <br />and why you should be a part of it.</p>
           </div>
 
           <div className="third-grid">
@@ -82,7 +83,7 @@ export default function Education() {
       </section>
 
       <div className="flex justify-center mt-14 mb-10">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="feature-grid grid grid-cols-3 gap-6">
               <div className="hover:border-red-400 hover:text-red-400 border border-gray-400 rounded py-4 px-20 flex items-center justify-center text-gray-500">
                 Fast academy
               </div>
@@ -118,11 +119,11 @@ export default function Education() {
                 <div className="py-10 lg:py-20">
                   <div className="lg:flex lg:items-center ml-8">
                     <div className="lg:w-1/2">
-                      <h1 className="text-4xl font-bold text-white">Free Demo Account</h1>
-                      <p className="text-lg text-gray-300 mt-4">
+                      <h1 className="heading-txt text-4xl font-bold text-white">Free Demo Account</h1>
+                      <p className="hide-txt text-lg text-gray-300 mt-4">
                       Practice Stocks and CFDs trading in a risk-free environment.
                       </p>
-                      <button className="bg-white hover:bg-blue-600 text-gray-600 px-8 rounded py-3 mt-8 mb-12">
+                      <button className="space-btn bg-white hover:bg-blue-600 text-gray-600 px-8 rounded py-3 mt-8 mb-12">
                       Open an account
                       </button>
                     </div>
@@ -132,21 +133,7 @@ export default function Education() {
             </div>
           </div>
 
-
-
-  <footer className="bg-stone-700 py-4">
-    <div className="container mx-auto flex items-center justify-between">
-      <img src="/logo.png" alt="Company Logo" className=" h-16" />
-      <div className="space-x-4">
-        <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Company news</button>
-        <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">Partnership</button>
-      </div>
-    </div>
-
-    <div className='container mx-auto py-10 text-gray-200'>Copyright ©2021 Liquid Inc. All Rights Reserved.</div>
-    <div className='container mx-auto py-5 text-gray-200'>Trading derivatives and leveraged products carries a high level of risk, including the risk of losing substantially more than your initial investment. It is not suitable for everyone. Before you make any decision in relation to a financial product you should obtain and consider our Product Disclosure Statement (PDS) and Financial Services Guide (FSG) available on our website and seek independent advice if necessary</div>
-
-  </footer>
+<Footer/>
 </main>
   )
 }
