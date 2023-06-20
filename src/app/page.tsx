@@ -1,66 +1,105 @@
+"use client"
 import Image from "next/image";
 import Carousel from "./Carousel";
+import { useState, useEffect } from 'react';
 import "./styles.css";
-import {BsPersonCircle} from "react-icons/bs"
+import {BsPersonCircle, BsList} from "react-icons/bs"
 
 export default function Home() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <main className="min-h-screen justify-between">
-      <header className="header">
+        <header className="header">
   <div className="custom-container">
-    <div className="flex items-center">
-      <img src="/logo.png" alt="Logo" className="h-12 mr-4 logo" />
-      <p className="company-name">LarvaTrade</p>
+    <div className="mobile-header-container flex items-center">
+      <img src="/logo.png" alt="Logo" className="mobile-header-img h-12 mr-4 logo" />
+      <p className="mobile-header-text company-name">LarvaTrade</p>
     </div>
-    <nav className="space-x-4 nav">
-      <a href="#" className="hover:text-neutral-400">
-        Home
-      </a>
-      <a href="#" className="hover:text-neutral-400">
-        Markets
-      </a>
-      <div className="dropdown inline-block relative">
-        <button className="hover:text-neutral-400">Company</button>
-        <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Careers</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-        </ul>
-      </div>
-      <a href="#" className="hover:text-neutral-400">
-        Education
-      </a>
-      <a href="#" className="hover:text-neutral-400">
-        Resources
-      </a>
-    </nav>
-    <button className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded custom-button">
+    <nav className="space-x-4 nav tab-menu">
+          <a href="#" className="hover:text-neutral-400">
+            Home
+          </a>
+          <a href="#" className="hover:text-neutral-400">
+            Markets
+          </a>
+          <div className="dropdown inline-block relative">
+            <button className="hover:text-neutral-400">Company</button>
+            <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" className="hover:text-neutral-400">
+            Education
+          </a>
+          <div className="dropdown inline-block relative">
+            <button className="hover:text-neutral-400">Resources</button>
+              <ul className="dropdown-content absolute hidden bg-white text-stone-700 pt-2">
+                <li>
+                  <a href="#">Customers</a>
+                </li>
+                <li>
+                  <a href="#">Roadmap</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    <button
+      className="bg-red-500 hover:bg-red-400 hover:text-white font-bold text-stone-700 text-sm py-2 px-4 rounded custom-button"
+    >
       <a href="/register">CREATE ACCOUNT</a>
     </button>
     <a href="/login">
       <BsPersonCircle color="#FC5B3F" size={20}/>
     </a>
   </div>
+  <div id="hamburger-btn" onClick={toggleMenu}>
+    <span></span>
+      <span></span>
+      <span></span>
+  </div>
+
+  {/* Mobile menu, hidden by default */}
+  <div className={`mobile-menu nav ${showMenu ? 'show' : ''}`}>
+<nav className="mobile-menu-nav">
+          <a href="/market"> Markets</a>
+          <a href="/company">Company</a>
+          <a href="/about">About</a>
+          <a href="/career">Career</a>
+          <a href="/contact">Contact</a>
+          <a href="/blog">Blog</a>
+          <a href="/education">Education</a>
+          <a href="/customers">Customers</a>
+          <a href="/roadmap">Roadmap</a>
+  </nav>
+  </div>
+  
 </header>
+
       <Carousel />
       <div className="second-showcase flex justify-between bg-black px-20px">
         <div>
-          <p className="text-4xl font-bold text-white">
+          <p className="second-text text-4xl font-bold text-white">
             Save time. Get <span className="text-red-400">higher return</span>.{" "}
             <br /> Multiply wealth.
           </p>
         </div>
         <div>
-          <button className="bg-transparent-500 hover:bg-red-500 text-white font-bold py-3 px-8 border border-red-500 border-solid rounded">
+          <button className="btn-hide bg-transparent-500 hover:bg-red-500 text-white font-bold py-3 px-8 border border-red-500 border-solid rounded">
             Find out more
           </button>
         </div>
@@ -198,7 +237,7 @@ export default function Home() {
       </div>
 
       <section className="bgh w-full h-full bg-no-repeat bg-cover">
-        <div className="flex flex-col md:flex-row ml-20">
+        <div className="laptop-showcase flex flex-col md:flex-row ml-20">
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
               src="/in-liquid-3-mockup.png"
@@ -206,11 +245,11 @@ export default function Home() {
               className="w-full mt-5"
             />
           </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-4 md:p-8">
+          <div className="laptop-showcase-text  w-full md:w-1/2 flex flex-col justify-center items-start p-4 md:p-8">
             <p className="text-orange-400 py-3">
               AVAILABLE ON MULTIPLE PLATFORM
             </p>
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="change-text text-4xl font-bold mb-4">
               World class platform <br />
               trade without a doubt.
             </h2>
@@ -241,12 +280,12 @@ export default function Home() {
       </section>
       <div className="second-showcase flex justify-between bg-white px-20px">
         <div>
-          <p className="text-4xl font-bold text-black">
+          <p className="change-text text-4xl font-bold text-black">
             Stay ahead of the curved.
           </p>
         </div>
         <div>
-          <button className="bg-transparent-500 hover:bg-gray-250 text-gray-600 font-bold py-3 px-8 border border-gray-300 border-solid rounded">
+          <button className="btn-hide bg-transparent-500 hover:bg-gray-250 text-gray-600 font-bold py-3 px-8 border border-gray-300 border-solid rounded">
             SHOW ALL
           </button>
         </div>
@@ -354,7 +393,7 @@ export default function Home() {
           <h2 className="text-1xl font-bold mb-12 text-center">
             Payment Method.
           </h2>
-          <div className="grid grid-cols-6 gap-12">
+          <div className="pay-grid grid grid-cols-6 gap-12">
             <img
               src="/in-liquid-payment-1.svg"
               alt="Payment Option 1"
@@ -363,27 +402,27 @@ export default function Home() {
             <img
               src="/in-liquid-payment-2.svg"
               alt="Payment Option 2"
-              className="w-full h-full object-cover"
+              className="pay-grid-img w-full h-full object-cover"
             />
             <img
               src="/in-liquid-payment-3.svg"
               alt="Payment Option 3"
-              className="w-full h-full object-cover"
+              className="pay-grid-img w-full h-full object-cover"
             />
             <img
               src="/in-liquid-payment-4.svg"
               alt="Payment Option 4"
-              className="w-full h-full object-cover"
+              className="pay-grid-img w-full h-full object-cover"
             />
             <img
               src="/in-liquid-payment-5.svg"
               alt="Payment Option 5"
-              className="w-full h-full object-cover"
+              className="pay-grid-img w-full h-full object-cover"
             />
             <img
               src="/in-liquid-payment-6.svg"
               alt="Payment Option 6"
-              className="w-full h-full object-cover"
+              className="pay-grid-img w-full h-full object-cover"
             />
           </div>
         </div>
@@ -391,8 +430,8 @@ export default function Home() {
 
       <footer className="bg-stone-700 py-4">
         <div className="container mx-auto flex items-center justify-between">
-          <img src="/logo.png" alt="Company Logo" className=" h-16" />
-          <div className="space-x-4">
+          <img src="/logo.png" alt="Company Logo" className="footer-pain h-16" />
+          <div className="btn-hide space-x-4">
             <button className="bg-transparent border-2 border-red-400 text-red-400 px-4 py-2 rounded">
               Company news
             </button>
@@ -402,10 +441,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mx-auto py-10 text-gray-200">
+        <div className="footer-p container mx-auto py-10 text-gray-200">
           Copyright ©2021 Liquid Inc. All Rights Reserved.
         </div>
-        <div className="container mx-auto py-5 text-gray-200">
+        <div className="footer-p container mx-auto py-5 text-gray-200">
           Trading derivatives and leveraged products carries a high level of
           risk, including the risk of losing substantially more than your
           initial investment. It is not suitable for everyone. Before you make
