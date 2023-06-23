@@ -1,7 +1,11 @@
+"use client"
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import { ThreeDots } from 'react-loader-spinner';
+import {useState} from 'react';
 
 const LoginPage = () => {
+  const show3Dots = useState(false)
   return (
     <div className="bg-black flex flex-col md:flex-row h-screen">
   <div className="md:w-2/3 bg-gray-300 flex items-center justify-center">
@@ -50,8 +54,9 @@ const LoginPage = () => {
 
       <div className="flex items-center justify-between">
         <button
-          type="submit"
+          type="button"
           className="w-full bg-white hover:bg-blue-600 hover:text-whi text-gray font-semibold py-2 px-4 rounded-md"
+          
         >
           Sign In
         </button>
