@@ -1,32 +1,44 @@
 const baseUrl = "https://mrpacc.pythonanywhere.com/"
 
 class API{
-    register(email, password, password2, setErrorText){
-        var myHeaders = new Headers()
+    async register(email, password, password2){
+        let myHeaders = new Headers()
         myHeaders.append("Content-Type", "application/json")
-        var raw = JSON.stringify({
+        let raw = JSON.stringify({
             "password": password,
             "email": email,
             "password2": password2
         })
-        var requestOptions = {
+        let requestOptions = {
             method: 'POST',
             headers: myHeaders,
             body: raw,
             redirect: 'follow'
         }
-        fetch(`${baseUrl}user/create`, requestOptions)
-            .then(response => response.text())
-            .then(result => {
-                result = JSON.parse(result)
-                console.log(result)
-                if (result.code == 200){
-                }
-                if (result.code == 400){
-                    setErrorText(result.message)
-                }
-            })
-            .catch(error => console.log('error', error));
+        let response = await fetch(`${baseUrl}user/create`, requestOptions)
+        let json = await response.json()
+        console.log(json)
+        return json
+    }
+
+    async login(email, password){
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        let raw = JSON.stringify({
+            "email": email,
+            "password": password
+        });
+        let requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        let response = await fetch(`${baseUrl}user/login`, requestOptions)
+        let json = await response.json()
+        console.log(json)
+        return json
     }
 }
 

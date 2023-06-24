@@ -14,6 +14,12 @@ const style = {
   justifyContent:"center"
 }
 
+function handleResponse(response:any, setErrorText:Function) {
+  if (response.code == 400){
+    setErrorText(response.message)
+  }
+}
+
 const LoginPage = () => {
   const api = new API()
   const [show3Dots, setShow3Dots] = useState(false)
@@ -83,14 +89,13 @@ const LoginPage = () => {
               onClick={async () => {
                 setErrorText("")
                 setShow3Dots(true)
-                await delay(2000)
-                api.register(
+                let response = await api.register(
                   formik.values.email,
                   formik.values.password,
                   formik.values.password2,
-                  setErrorText
                 );
                 setShow3Dots(false)
+                handleResponse(response, setErrorText)
               }}
             >
               {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Sign Up"}
