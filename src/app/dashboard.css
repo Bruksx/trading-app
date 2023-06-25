@@ -699,12 +699,12 @@ select{
     margin-right: auto;
     margin-left: auto;
 }
-@media (min-width: 640px){
+@media (min-width: 800px){
     .container{
         max-width: 640px;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 800px){
     .container{
         max-width: 768px;
     }
@@ -2527,7 +2527,7 @@ select{
       margin-top: -4rem;
       margin-bottom: 4rem;
     }
-@media (min-width: 640px) {
+@media (min-width: 800px) {
     .modal .modal-dialog {
         width: 460px
     }
@@ -7690,7 +7690,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     max-width: fit-content;
     max-width: -moz-fit-content;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 800px) {
     .toastify-right, .toastify-left {
         margin-left: auto;
         margin-right: auto;
@@ -11658,7 +11658,7 @@ html body{
         width: 85px;
     }
   }
-@media (max-width: calc(768px - 1px)) {
+@media (max-width: calc(908px - 1px)) {
     .side-nav{
         display: none;
     }
@@ -13817,7 +13817,7 @@ html body{
     visibility: visible;
     opacity: 1;
 }
-@media (max-width: calc(640px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .mobile-menu{
         margin-left: -0.75rem;
         margin-right: -0.75rem;
@@ -13830,7 +13830,7 @@ html body{
         padding-left: 2rem;
         padding-right: 2rem;
     }
-@media (max-width: calc(640px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .mobile-menu .mobile-menu-bar{
         padding-left: 0.75rem;
         padding-right: 0.75rem;
@@ -14038,7 +14038,7 @@ html body{
 .news .news__preview {
         height: 400px;
     }
-@media (max-width: calc(768px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .news .news__preview {
             height: 250px;
     }
@@ -14101,7 +14101,7 @@ html body{
 .notification-content {
     width: 350px;
 }
-@media (max-width: calc(640px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .notification-content {
         width: 280px;
     }
@@ -14170,7 +14170,7 @@ html body{
         width: 310px;
     }
   }
-@media (max-width: calc(640px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .litepicker {
         left: 0px !important;
         right: 0px;
@@ -14732,7 +14732,7 @@ html body{
     background-color: transparent;
     padding: 0px;
 }
-@media (max-width: calc(768px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .tabulator .tabulator-footer{
         white-space: normal;
     }
@@ -14741,7 +14741,7 @@ html body{
     display: flex;
     align-items: center;
 }
-@media (max-width: calc(768px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .tabulator .tabulator-footer .tabulator-paginator{
         display: block;
         text-align: left;
@@ -14772,7 +14772,7 @@ html body{
                 padding-left: 0.75rem;
                 padding-right: 2rem;
             }
-@media (max-width: calc(768px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .tabulator .tabulator-footer .tabulator-paginator .tabulator-page-size{
         margin-right: 0.75rem;
     }
@@ -14833,7 +14833,7 @@ html body{
     --tw-text-opacity: 1;
     color: rgb(var(--color-slate-700) / var(--tw-text-opacity));
 }
-@media (max-width: calc(640px - 1px)) {
+@media (max-width: calc(900px - 1px)) {
     .tabulator .tabulator-footer .tabulator-paginator .tabulator-page{
         margin-right: 0px;
         padding-left: 0.25rem;
@@ -16223,7 +16223,7 @@ html body{
     --tw-bg-opacity: 1;
     background-color: rgb(var(--color-darkmode-400) / var(--tw-bg-opacity));
 }
-@media (min-width: 640px){
+@media (min-width: 900px){
     .sm\:static{
         position: static;
     }
@@ -16528,7 +16528,7 @@ html body{
     border-left: 2px solid #fff;
  }
 
-@media (min-width: 768px){
+@media (min-width: 900px){
     .md\:col-span-2{
         grid-column: span 2 / span 2;
     }
@@ -17229,9 +17229,13 @@ html body{
 
 
 
-@media (max-width: 768px){
+@media (max-width: 920px){
   .intro-y.fle{
     flex-direction: column;
+  }
+
+  .mobile-menu.this{
+     display: block;
   }
 
   .enlarge{
