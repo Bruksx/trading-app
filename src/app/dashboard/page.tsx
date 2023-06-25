@@ -4,6 +4,7 @@ import "../dashboard.css";
 import React, { useEffect, useState } from 'react';
 import { ShoppingCart, CreditCard, Monitor, User} from 'lucide-react';
 import MobileHeader from "../mobile-header"
+import DashboardNav from "../dashboardnav";
 
 export default function Dashboard() {
 
@@ -62,6 +63,7 @@ export default function Dashboard() {
             </ul>
         </nav>
 
+        <DashboardNav/>
         <div className="content">
           
             <div className="top-bar">

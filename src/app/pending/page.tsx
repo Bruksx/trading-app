@@ -3,6 +3,8 @@ import Image from 'next/image';
 import "../dashboard.css";
 import React, { useEffect, useState } from 'react';
 import MobileHeader from "../mobile-header"
+import { ShoppingCart, CreditCard, Monitor, User} from 'lucide-react';
+import DashboardNav from '../dashboardnav';
 
 export default function Pending() {
 
@@ -60,6 +62,7 @@ export default function Pending() {
                 </li>
             </ul>
         </nav>
+        <DashboardNav/>
 
         <div className="content">
           

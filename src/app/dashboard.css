@@ -22,7 +22,7 @@
 }
 
 .intro-y.box.rom{
-  background: rgb(12, 12, 36)!important;
+  background: rgb(17, 24, 34)!important;
 }
 
 .intro-y.fle{
@@ -60,19 +60,20 @@
 }
 
 body{
-  background: rgb(12, 12, 36)!important;
+  background: rgb(17, 24, 34)!important;
 }
 
 html{
-  background:rgb(12, 12, 36)!important;
+  background:rgb(17, 24, 34)!important;
 } 
 
 .side-nav{
-   background: rgb(12, 12, 36)!important;;
+   background: rgb(17, 24, 34)!important;
+   color:rgb(30, 41, 59);
 }
 
 .bg-black{
-  background: rgb(12, 12, 36)!important;
+  background: rgb(17, 24, 34)!important;
 }
 
 .mobile-header-text{
@@ -93,26 +94,30 @@ html{
 }
 
 .content{
-  background:rgb(11, 5, 56)!important;
+  background:rgb(30, 41, 59)!important;
   color: #fff!important;
 }
 
 .side-menu{
-  background: rgb(11, 5, 56)!important;
+  background: rgb(30, 41, 59)!important;
   font-weight: bold!important;
   color: #fff!important;
 }
 
 .side-menu.side-active--active{
-  background: rgb(11, 5, 56)!important;
+  background: rgb(30, 41, 59)!important;
   font-weight: bold!important;
   color: #fff!important;
 }
 
 .side-menu__title{
-  background: rgb(11, 5, 56)!important;
-  font-weight: bold!important;
-  color: #fff!important;
+  background: rgb(30, 41, 59)!important;
+  font-weight: 300 !important;
+  color: rgb(221, 228, 238) !important;
+  display: flex !important;
+  flex-direction: row!important;
+  justify-content: space-between!important;
+  width: 120px !important;
 }
 
 .breadcrumb-item.active{
@@ -122,19 +127,19 @@ html{
 }
 
 .box.all{
-  background: rgb(12, 12, 36)!important;
+  background: rgb(17, 24, 34)!important;
 }
 
 td{
-  background: rgb(12, 12, 36)!important;
+  background: rgb(17, 24, 34)!important;
 }
 
 .report-box:before {
-  background-color: rgb(12, 12, 36)!important;
+  background-color: rgb(17, 24, 34)!important;
 }
 
 .side-menu.side-menu--active .side-menu__icon:before {
-  background-color: rgb(11, 5, 56)!important;
+  background-color: rgb(30, 41, 59)!important;
 }
 
 .side-nav > ul > li > .side-menu.side-menu--active:before {
