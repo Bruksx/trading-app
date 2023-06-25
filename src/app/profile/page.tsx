@@ -3,6 +3,7 @@ import Image from 'next/image';
 import "../dashboard.css";
 import React, { useEffect, useState } from 'react';
 import MobileHeader from "../mobile-header"
+import DashboardNav from '../dashboardnav';
 
 export default function Profile() {
 
@@ -10,56 +11,7 @@ export default function Profile() {
     <main className="py-5">
         <MobileHeader/>
     <div className="flex mt-[4.7rem] md:mt-0">
-
-        <nav className="side-nav">
-            <a href="" className="intro-x flex items-center pl-5 pt-4">
-            <div className="mobile-header-container logo-dashboard flex items-center">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="mobile-header-img dash h-12 mr-4 logo"
-          />
-          <p className="mobile-header-text company-name">LarvaTrade</p>
-        </div>
-            </a>
-            <div className="side-nav__devider my-6"></div>
-            <ul className='bg-black'>
-                <li>
-                    <a href="/dashboard" className="side-menu">
-                        <div className="side-menu__icon"> <i data-lucide="home"></i> </div>
-                        <div className="side-menu__title text-white font-bold">
-                            Dashboard 
-                            <div className="side-menu__sub-icon transform rotate-180"> <i data-lucide="chevron-down"></i> </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/investment" className="side-menu">
-                        <div className="side-menu__icon"> <i data-lucide="box"></i> </div>
-                        <div className="side-menu__title">
-                            Investment
-                            <div className="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/pending" className="side-menu">
-                        <div className="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
-                        <div className="side-menu__title">
-                            Pending 
-                            <div className="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/profile" className="side-menu side-menu--active">
-                        <div className="side-menu__icon"> <i data-lucide="inbox"></i> </div>
-                        <div className="side-menu__title"> Profile </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+    <DashboardNav/>
         <div className="content">
           
             <div className="top-bar">
