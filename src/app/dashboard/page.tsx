@@ -3,38 +3,14 @@ import Image from 'next/image';
 import "../dashboard.css";
 import React, { useEffect, useState } from 'react';
 import { ShoppingCart, CreditCard, Monitor, User} from 'lucide-react';
+import MobileHeader from "../mobile-header"
 
 export default function Dashboard() {
 
   return (
     <main className="py-5">
     
-    <div className="mobile-menu this md:hidden">
-        <div className="mobile-menu-bar">
-            <a href="" className="flex mr-auto">
-            <div className="mobile-header-container flex items-center">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="mobile-header-img dash h-16 mr-4 logo"
-          />
-          <p className="mobile-header-text company-name text-white text-2xl">LarvaTrade</p>
-        </div>
-            </a>
-            <a href="" className="mobile-menu-toggler"> <i data-lucide="bar-chart-2" className="w-8 h-8 text-white transform -rotate-90"></i> </a>
-        </div>
-        <div className="scrollable">
-            <a href="" className="mobile-menu-toggler"> <i data-lucide="x-circle" className="w-8 h-8 text-white transform -rotate-90"></i> </a>
-            <ul className="scrollable__content py-2">
-                <li>
-                    <a href=".html" className="menu menu--active">
-                        <div className="menu__icon"> <i data-lucide="home"></i> </div>
-                        <div className="menu__title"> Dashboard <i data-lucide="chevron-down" className="menu__sub-icon transform rotate-180"></i> </div>
-                    </a>     
-                </li>
-            </ul>
-        </div>
-    </div>
+    <MobileHeader/>
     <div className="flex mt-[4.7rem] md:mt-0">
 
         <nav className="side-nav">
@@ -51,7 +27,7 @@ export default function Dashboard() {
             <div className="side-nav__devider my-6"></div>
             <ul className='bg-black'>
                 <li>
-                    <a href=".html" className="side-menu side-menu--active">
+                    <a href="/dashboard" className="side-menu side-menu--active">
                         <div className="side-menu__icon"> <i data-lucide="home"></i> </div>
                         <div className="side-menu__title text-white font-bold">
                             Dashboard 
@@ -60,7 +36,7 @@ export default function Dashboard() {
                     </a>
                 </li>
                 <li>
-                    <a href="" className="side-menu">
+                    <a href="/investment" className="side-menu">
                         <div className="side-menu__icon"> <i data-lucide="box"></i> </div>
                         <div className="side-menu__title">
                             Investment
@@ -69,7 +45,7 @@ export default function Dashboard() {
                     </a>
                 </li>
                 <li>
-                    <a href="" className="side-menu">
+                    <a href="/pending" className="side-menu">
                         <div className="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
                         <div className="side-menu__title">
                             Pending 
@@ -78,7 +54,7 @@ export default function Dashboard() {
                     </a>
                 </li>
                 <li>
-                    <a href="side-menu-light-inbox.html" className="side-menu">
+                    <a href="/profile" className="side-menu">
                         <div className="side-menu__icon"> <i data-lucide="inbox"></i> </div>
                         <div className="side-menu__title"> Profile </div>
                     </a>
