@@ -6,7 +6,7 @@ import API from "../utils/api"
 import delay from "../utils/delay"
 import { ThreeDots } from 'react-loader-spinner';
 import {useState} from 'react';
-
+import {useRouter} from "next/navigation";
 
 const style = {
   display:"flex",
@@ -14,17 +14,33 @@ const style = {
   justifyContent:"center"
 }
 
-function handleResponse(response:any, setErrorText:Function) {
-  if (response.code == 400){
-    setErrorText(response.message)
+function handleResponse(
+  response: any,
+  setErrorText: Function,
+  setErrorTextClass: Function,
+  router:any,
+) {
+  setErrorTextClass("text-red-400")
+  if (response.code == 400) {
+    setErrorText(response.message);
+  }
+  else if (response.code == 200) {
+    setErrorTextClass("text-green-400")
+    setErrorText(response.message);
+    router.push("/login")
+  } else {
+    setErrorTextClass("text-green-400");
+    setErrorText("Some error occured");
   }
 }
 
 const LoginPage = () => {
+  const router = useRouter()
   const api = new API()
   const [show3Dots, setShow3Dots] = useState(false)
   const [errorText, setErrorText] = useState("")
-  const formik = useFormik({
+  const [errorTextClass, setErrorTextClass] = useState("text-red-400")
+  const formik:any = useFormik({
     initialValues:{
       email:"",
       password:"",
@@ -95,14 +111,14 @@ const LoginPage = () => {
                   formik.values.password2,
                 );
                 setShow3Dots(false)
-                handleResponse(response, setErrorText)
+                handleResponse(response, setErrorText, setErrorTextClass, router)
               }}
             >
               {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Sign Up"}
             </button>
           </div>
 
-          <p className="text-red-400">{errorText}</p>
+          <p className={errorTextClass}>{errorText}</p>
 
           <h2 className="text-white px-4 color mt-10 text-sm">
             Already have an account?{" "}
