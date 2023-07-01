@@ -5,6 +5,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { useState } from "react";
 import { useFormik } from "formik";
 import API from "../utils/api";
+import { useRouter } from "next/navigation";
 
 const style = {
   display:"flex",
@@ -12,18 +13,32 @@ const style = {
   justifyContent:"center"
 }
 
-async function handleClick(setShow3Dots:Function, setErrorText:Function, api:API, email:string, password:string){
-  setErrorText("")
-  setShow3Dots(true)
-  let response = await api.login(email, password)
-  if (response.code == 400){
-    setErrorText(response.message)
+function handleResponse(
+  response: any,
+  setErrorText: Function,
+  setErrorTextClass: Function,
+  router:any,
+) {
+  setErrorTextClass("text-red-400")
+  if (response.code == 400) {
+    setErrorText(response.message);
   }
-  setShow3Dots(false)
+  else if (response.code == 200) {
+    setErrorTextClass("text-green-400")
+    setErrorText(response.message);
+    localStorage.setItem("token",response.token)
+    localStorage.setItem("user", JSON.stringify(response.user))
+    router.push("/dashboard")
+  } else {
+    setErrorTextClass("text-green-400");
+    setErrorText("Some error occured");
+  }
 }
 
 const LoginPage = () => {
+  const router = useRouter()
   const [errorText, setErrorText] = useState("")
+  const [errorTextClass, setErrorTextClass] = useState("text-red-400")
   const api = new API()
   const [show3Dots,setShow3Dots] = useState(false);
   const formik = useFormik({
@@ -89,12 +104,19 @@ const LoginPage = () => {
             <button
               type="button"
               className="w-full bg-blue-600 hover:bg-blue-400 hover:text-whi text-gray font-semibold py-2 px-4 rounded-md"
-              onClick={() =>{handleClick(setShow3Dots, setErrorText, api, formik.values.email, formik.values.password)}}
+              onClick={async () =>{
+                setErrorText("")
+                setShow3Dots(true)
+                let response = await api.login(formik.values.email, formik.values.password)
+                setShow3Dots(false)
+                handleResponse(response, setErrorText, setErrorTextClass, router)
+              }
+            }
             >
               {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Sign In"}
             </button>
           </div>
-          <p className="text-red-400">{errorText}</p>
+          <p className={errorTextClass}>{errorText}</p>
           <h2 className="text-white px-4 color mt-10 text-sm">
             Don't have an account?{" "}
             <span className="font-bold">
