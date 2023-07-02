@@ -41,9 +41,9 @@ function handleClick(
 }
 
 export default function Investment() {
-  if (! localStorage.getItem("user")){
-    redirect("/login")
-  }
+  //if (! localStorage.getItem("user")){
+  //  redirect("/login")
+  //}
   const api = new API()
   let user = JSON.parse(localStorage.getItem("user"));
   const [show3Dots,setShow3Dots] = useState(false);

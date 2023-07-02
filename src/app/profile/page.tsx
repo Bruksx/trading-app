@@ -21,9 +21,9 @@ export default function Profile() {
     const [show3Dots,setShow3Dots] = useState(false);
     api.updateUser()
     let user:any = localStorage.getItem("user")
-    if (!user){
-      redirect("/login")
-    }
+    //if (!user){
+    //  redirect("/login")
+    //}
     user = JSON.parse(user)
     const formik = useFormik({
         initialValues:{

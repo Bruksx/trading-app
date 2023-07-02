@@ -18,9 +18,9 @@ export default function Dashboard() {
   const [orders, setOrders] = useState(0)
   const [totalProfit, setTotalProfit] = useState(0)
   const [topTraders, setTopTraders] = useState([])
-  if (!token) {
-    router.push("/login");
-  }
+  //if (!token) {
+  //  router.push("/login");
+  //}
   useEffect(()=>{
     let data = api.dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders)
   }, [1])
