@@ -119,12 +119,12 @@ export default function Education() {
                 <div className="py-10 lg:py-20">
                   <div className="lg:flex lg:items-center ml-8">
                     <div className="lg:w-1/2">
-                      <h1 className="heading-txt text-4xl font-bold text-white">Free Demo Account</h1>
+                      <h1 className="heading-txt text-4xl font-bold text-white">Free Account</h1>
                       <p className="hide-txt text-lg text-gray-300 mt-4">
                       Practice Stocks and CFDs trading in a risk-free environment.
                       </p>
                       <button className="space-btn bg-white hover:bg-blue-600 text-gray-600 px-8 rounded py-3 mt-8 mb-12">
-                      Open an account
+                        <a href='signup/'>Open an account</a>
                       </button>
                     </div>
                   </div>

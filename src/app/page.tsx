@@ -38,8 +38,7 @@ export default function Home() {
             Various assets
           </p>
           <p className="text-gray-600 text-white py-6">
-            Duis aute irure dolor in reprehen derit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+          There is no single best way to trade. There is, however, a best way for you to trade.
           </p>
         </div>
         <div className="grd bg-white p-4 shadow-md">
@@ -52,8 +51,8 @@ export default function Home() {
             Market analysis
           </p>
           <p className="text-gray-600 text-white py-6">
-            Duis aute irure dolor in reprehen derit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+          detailed assessment of your business's target market and the competitive 
+          landscape within a specific industry
           </p>
         </div>
         <div className="grd bg-white p-4 shadow-md">
@@ -66,8 +65,7 @@ export default function Home() {
             Enhanced tools
           </p>
           <p className="text-gray-600 text-white py-6">
-            Duis aute irure dolor in reprehen derit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+            forex tools for finding expert services
           </p>
         </div>
       </div>
@@ -79,11 +77,8 @@ export default function Home() {
             <div className="text-blurb">
               <h1>Expert Service</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium veritatis asperiores placeat quisquam voluptas
-                repellendus.
+              we specialize in specific markets (stocks, options, forex, etc.) or specific trading strategies (day trading, swing trading, long-term investing, etc.). 
               </p>
-              <button>LEARN MORE</button>
             </div>
           </div>
 
@@ -92,11 +87,9 @@ export default function Home() {
             <div className="text-blurb">
               <h1>Fully regulated</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium veritatis asperiores placeat quisquam voluptas
-                repellendus.
+              Trading regulations vary from country to country and are designed to protect investors, maintain market integrity, and ensure fair and transparent trading practices. While I can provide some general information, it's important to note that specific regulations may differ depending on the jurisdiction.
+              We follow all regulations put in place by government bodies
               </p>
-              <button>LEARN MORE</button>
             </div>
           </div>
         </div>
@@ -107,11 +100,9 @@ export default function Home() {
             <div className="text-blurb">
               <h1>Financial Strength</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium veritatis asperiores placeat quisquam voluptas
-                repellendus.
+              it's about having the resilience, stability, and agility to navigate through economic challenges and seize opportunities. It's the foundation that empowers individuals 
+              and organizations to weather storms, pursue growth, and build a secure future
               </p>
-              <button>LEARN MORE</button>
             </div>
           </div>
 
@@ -119,12 +110,7 @@ export default function Home() {
             <img src="/in-liquid-icon-4.svg" alt="icon" />
             <div className="text-blurb">
               <h1>Integrated Support</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Accusantium veritatis asperiores placeat quisquam voluptas
-                repellendus.
-              </p>
-              <button>LEARN MORE</button>
+              <p>Our support connects knowledge, expertise, and resources, empowering individuals and organizations to overcome obstacles, achieve goals, and thrive together</p>
             </div>
           </div>
         </div>
@@ -175,11 +161,6 @@ export default function Home() {
               World class platform <br />
               trade without a doubt.
             </h2>
-            <p className="text-lg mb-4">
-              Vivamus id sapien vitae urna vestibulum semper. Curabitur eget
-              semper tortor. Aliquam posuere nulla a fermentum sagittis. Morbi
-              eu ipsum sit amet nisl tempor tempus.
-            </p>
             {/* <div className="flex justify-between">
             <img
               src="/macos-image.png"
@@ -207,9 +188,7 @@ export default function Home() {
           </p>
         </div>
         <div>
-          <button className="btn-hide bg-transparent-500 hover:bg-gray-250 text-gray-600 font-bold py-3 px-8 border border-gray-300 border-solid rounded">
-            SHOW ALL
-          </button>
+          
         </div>
       </div>
 
@@ -222,12 +201,6 @@ export default function Home() {
             <p className="ml-5 text-gray-500">Reuters</p>
           </div>
           <p className="text-gray-400 mb-5 mt-2">June 14, 2023</p>
-          <p className="text-gray-700">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit ...
-          </p>
-          <button className="bg-red-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-8 rounded">
-            Read More
-          </button>
         </div>
         <div className="border-l-2 border-red-400 p-4">
           <div className="flex justify-between">
@@ -237,12 +210,7 @@ export default function Home() {
             <p className="ml-9 text-gray-500">BBC</p>
           </div>
           <p className="text-gray-400 mb-5 mt-2">June 14, 2023</p>
-          <p className="text-gray-700">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit ...
-          </p>
-          <button className="bg-red-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
-            Read More
-          </button>
+
         </div>
         <div className="border-l-2 border-red-400 p-4">
           <div className="flex justify-between">
@@ -252,12 +220,6 @@ export default function Home() {
             <p className="ml-9 text-gray-500">BBC</p>
           </div>
           <p className="text-gray-400 mb-5 mt-2">June 14, 2023</p>
-          <p className="text-gray-700">
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit ...
-          </p>
-          <button className="bg-red-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
-            Read More
-          </button>
         </div>
       </div>
 
