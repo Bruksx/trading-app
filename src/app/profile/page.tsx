@@ -6,10 +6,20 @@ import MobileHeader from "../mobile-header";
 import DashboardNav from "../dashboardnav";
 import { useFormik } from "formik";
 import API from "../utils/api";
+import { ApiError } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
+
+function handleClick(api:API){
+  api.updateUser()
+}
 
 export default function Profile() {
     const api = new API()
+    api.updateUser()
     let user:any = localStorage.getItem("user")
+    if (!user){
+      redirect("/login")
+    }
     user = JSON.parse(user)
     const formik = useFormik({
         initialValues:{
@@ -195,6 +205,48 @@ export default function Profile() {
                         </div>
                         <div className="col-span-12 2xl:col-span-6">
                           <div className="mt-3">
+                            <label className="form-label">First Name</label>
+                            <input
+                              name="first_name"
+                              value={formik.values.first_name}
+                              onChange={formik.handleChange}
+                              type="text"
+                              placeholder="Account name"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-span-12 2xl:col-span-6">
+                          <div className="mt-3">
+                            <label className="form-label">Middle Name</label>
+                            <input
+                              name="middle_name"
+                              value={formik.values.middle_name}
+                              onChange={formik.handleChange}
+                              type="text"
+                              placeholder=""
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-span-12 2xl:col-span-6">
+                          <div className="mt-3">
+                            <label className="form-label">Last Name</label>
+                            <input
+                              name="last_name"
+                              value={formik.values.last_name}
+                              onChange={formik.handleChange}
+                              type="text"
+                              placeholder="Account name"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="col-span-12 2xl:col-span-6">
+                          <div className="mt-3">
                             <label className="form-label">Bank Name</label>
                             <input
                               name="bank_name"
@@ -206,18 +258,25 @@ export default function Profile() {
                             />
                           </div>
                         </div>
-
-
-                        
                       </div>
                       <button
                         type="button"
                         className="btn btn-primary w-20 mt-3"
+                        onClick={() => {
+                          api.editAcount(
+                            formik.values.first_name,
+                            formik.values.middle_name,
+                            formik.values.last_name,
+                            formik.values.address,
+                            formik.values.phone_number,
+                            formik.values.bank_name,
+                            formik.values.account_number
+                          );
+                        }}
                       >
                         Update
                       </button>
                     </div>
-                    
                   </div>
                 </div>
               </div>

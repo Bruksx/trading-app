@@ -111,8 +111,9 @@ class API{
         fetch(`${baseUrl}user/details`, requestOptions)
             .then(response => response.text())
             .then(result => {
-                console.log(result)
-                localStorage.setItem("user", JSON.parse(result.user))
+                let user = JSON.parse(result).user
+                console.log(user)
+                localStorage.setItem("user", JSON.stringify(user))
             })
     }
 
@@ -131,9 +132,38 @@ class API{
             .then(result => {
                 result = JSON.parse(result)
                 setInvestments(result.investments)
-                console.log(investments)
             })
             .catch(error => console.log('error', error));
+    }
+
+    editAcount(first_name, middle_name, last_name, address, phone_number, bank_name, account_number){
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+
+        var raw = JSON.stringify({
+            "first_name": first_name,
+            "middle_name": middle_name,
+            "last_name": last_name,
+            "address": address,
+            "phone_number":phone_number,
+            "bank_name": bank_name,
+            "account_number":account_number,
+        });
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch(`${baseUrl}user/edit`, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            console.log(result)
+        })
+        .catch(error => console.log('error', error));
     }
 }
 
