@@ -129,6 +129,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
+    width: fit-content;
 }
 
 .third-container .first-flex .first-flex-container .text-blurb{

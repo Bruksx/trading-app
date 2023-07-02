@@ -29,8 +29,8 @@ export default function DashboardNav() {
         <NavItem navigateTo="#" title="Logout" icon={<BiLogIn size={24}/>} customClickEvent={()=>{
           console.log("here")
           localStorage.removeItem("token") 
-          localStorage.removeItem("user")
-          redirect("/")
+          localStorage.removeItem("user");
+          window.location.href = "/"; // Redirect to '/'
         }}/>
       </ul>
     </nav>
