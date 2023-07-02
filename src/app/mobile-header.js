@@ -4,8 +4,10 @@ import useScrollDirection from "./hooks/scrolldirection";
 import "./dashboard.css";
 import {BsBox, BsGraphUp, BsFillClockFill, BsFillPersonFill, BsPersonDown } from "react-icons/bs";
 import React, { useEffect, useState } from 'react';
+import useLocalStorage from './utils/uselocalstorage';
 
 export default function MobileHeader(props) {
+    const [token, setToken] = useLocalStorage("token")
     const scrollDirection = useScrollDirection();
     let className = scrollDirection === "up" ? "header" : "header header-down";
     if (props.fixed) {
@@ -39,18 +41,17 @@ export default function MobileHeader(props) {
       {/* Mobile menu, hidden by default */}
       <div className={`mobile-menu nav ${showMenu ? "show" : ""}`}>
         <nav className="mobile-menu-nav">
-        <a href="/blog" className="mobile_navigation" style={{ display: 'flex'}}>
+        <a href="/dashboard" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsBox color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Dashboard</span></a>
-          <a href="/education" className="mobile_navigation" style={{ display: 'flex'}}>
+          <a href="/investment" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsGraphUp color="#FFFFFF" size={18} />  <span className="inline-block pl-2">Investment</span></a>
-          <a href="/customers" className="mobile_navigation" style={{ display: 'flex'}}>
+          <a href="/pending" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsFillClockFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Pending</span></a>
-          <a href="/Profile" className="mobile_navigation" style={{ display: 'flex'}}>
+          <a href="/profile" className="mobile_navigation" style={{ display: 'flex'}}>
           <BsFillPersonFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Profile</span></a>
           <a href="#" className="mobile_navigation" style={{ display: 'flex'}} onClick={()=>{
-          localStorage.removeItem("token") 
-          localStorage.removeItem("user");
-          window.location.href = "/"; // Redirect to Homepage'
+            setToken("")
+            window.location.href = "/"; // Redirect to Homepage'
         }}>
           <BsPersonDown color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Logout</span></a>
          

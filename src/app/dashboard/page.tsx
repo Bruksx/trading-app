@@ -9,21 +9,17 @@ import { MdAccountBalanceWallet, MdSavings } from "react-icons/md";
 import { useToken } from "../hooks/hooks";
 import { useRouter } from "next/navigation";
 import API from "../utils/api";
+import useLocalStorage from "../utils/uselocalstorage";
 
 export default function Dashboard() {
   const api = new API();
   const router = useRouter();
-  let token = localStorage.getItem("token");
-  const [balance, setBalance] = useState("")
+  const [balance, setBalance] = useState(0)
   const [orders, setOrders] = useState(0)
   const [totalProfit, setTotalProfit] = useState(0)
   const [topTraders, setTopTraders] = useState([])
-  //if (!token) {
-  //  router.push("/login");
-  //}
-  useEffect(()=>{
-    let data = api.dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders)
-  }, [1])
+  const [token, setToken] = useLocalStorage("token")
+  useEffect(()=>{let data = api.dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders);}, [])
   
   return (
     <main className="py-5">
@@ -196,7 +192,7 @@ export default function Dashboard() {
                       <tbody>
                         {topTraders.map(function (trader:any){
                             return (
-                            <tr className="intro-x" key={trader.uid}>
+                            <tr className="intro-x" key={trader}>
                             <td className="w-40">
                               <div className="flex">
                                 <div className="w-10 h-10 image-fit zoom-in">

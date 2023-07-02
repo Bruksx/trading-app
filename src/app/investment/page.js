@@ -9,6 +9,7 @@ import API from "../utils/api";
 import { useFormik} from "formik";
 import { redirect } from "next/navigation";
 import { ThreeDots } from "react-loader-spinner";
+import useLocalStorage from "../utils/uselocalstorage"
 
 const style = {
   display:"flex",
@@ -41,16 +42,12 @@ function handleClick(
 }
 
 export default function Investment() {
-  //if (! localStorage.getItem("user")){
-  //  redirect("/login")
-  //}
   const api = new API()
-  let user = JSON.parse(localStorage.getItem("user"));
+  let [user, setUser] = useLocalStorage("user", {})
   const [show3Dots,setShow3Dots] = useState(false);
   const [errorText, setErrorText] = useState("")
   const [errorTextClass, setErrorTextClass] = useState("text-red-400")
-  const [balance, setBalance] = useState(user.balance)
-  console.log(user)
+  const [balance, setBalance] =  useState(user.balance)
   const formik = useFormik({
     initialValues:{
         "amount":"",
