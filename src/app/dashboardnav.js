@@ -27,10 +27,9 @@ export default function DashboardNav() {
         <NavItem navigateTo="/pending" title="Pending" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/profile" title="Profile" icon={<AiOutlineUser size={24}/>} />
         <NavItem navigateTo="#" title="Logout" icon={<BiLogIn size={24}/>} customClickEvent={()=>{
-          console.log("here")
           localStorage.removeItem("token") 
           localStorage.removeItem("user");
-          window.location.href = "/"; // Redirect to '/'
+          window.location.href = "/"; // Redirect to Homepage'
         }}/>
       </ul>
     </nav>
