@@ -21,7 +21,8 @@ export default function Profile() {
     const api = new API()
     const [show3Dots,setShow3Dots] = useState(false);
     const [token, setToken] = useLocalStorage("token", "")
-    let [user, setUser] = useLocalStorage("user",{})
+    let [user, setUser] = useLocalStorage("user","{}")
+    console.log(user)
     user = JSON.parse(user)
     const formik = useFormik({
         initialValues:{
