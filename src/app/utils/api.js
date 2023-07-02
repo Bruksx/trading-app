@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation"
-import useLocalStorage from "./uselocalstorage"
 
 const baseUrl = "https://mrpacc.pythonanywhere.com/"
 
@@ -141,11 +140,11 @@ class API{
             .catch(error => console.log('error', error));
     }
 
-    editAcount(first_name, middle_name, last_name, address, phone_number, bank_name, account_number, setShow3Dots){
+    editAcount(token, first_name, middle_name, last_name, address, phone_number, bank_name, account_number, setShow3Dots){
         setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+        myHeaders.append("Authorization", `Bearer ${token}`);
 
         var raw = JSON.stringify({
             "first_name": first_name,

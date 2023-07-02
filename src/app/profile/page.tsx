@@ -21,7 +21,6 @@ export default function Profile() {
     const api = new API()
     const [show3Dots,setShow3Dots] = useState(false);
     const [token, setToken] = useLocalStorage("token", "")
-    //api.updateUser()
     let [user, setUser] = useLocalStorage("user",{})
     user = JSON.parse(user)
     const formik = useFormik({
@@ -203,6 +202,7 @@ export default function Profile() {
                         className="btn btn-primary w-20 mt-3"
                         onClick={() => {
                           api.editAcount(
+                            token,
                             formik.values.first_name,
                             formik.values.middle_name,
                             formik.values.last_name,
