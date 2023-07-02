@@ -4,15 +4,6 @@ import useLocalStorage from "./uselocalstorage"
 const baseUrl = "https://mrpacc.pythonanywhere.com/"
 
 class API{
-    token(){
-        const [token, setToken] = useLocalStorage("token", "")
-        return token
-    }
-
-    user(){
-        return localStorage.getItem("user")
-    }
-
     async register(email, password, password2){
         let myHeaders = new Headers()
         myHeaders.append("Content-Type", "application/json")
