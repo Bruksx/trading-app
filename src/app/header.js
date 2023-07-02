@@ -1,6 +1,6 @@
 "use client";
 import useScrollDirection from "./hooks/scrolldirection";
-import { BsPersonCircle } from "react-icons/bs";
+import { BsPersonCircle, BsFillFileBarGraphFill, BsLightbulb, BsFillPersonFill, BsBagFill, BsNewspaper, BsFillBookFill, BsPeopleFill, BsFillSignIntersectionSideFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 
 export default function Header(props) {
@@ -79,16 +79,24 @@ export default function Header(props) {
       {/* Mobile menu, hidden by default */}
       <div className={`mobile-menu nav ${showMenu ? "show" : ""}`}>
         <nav className="mobile-menu-nav">
-          <a href="/market"> Markets</a>
-          <a href="/about">About</a>
-          <a href="/career">Career</a>
-          <a href="/contact">Contact</a>
-          <a href="/blog">Blog</a>
-          <a href="/education">Education</a>
-          <a href="/customers">Customers</a>
-          <a href="/roadmap">Roadmap</a>
+          <a href="/market" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsFillFileBarGraphFill color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Markets</span> </a>
+          <a href="/about" className="mobile_navigation" style={{ display: 'flex'}} >
+           <BsLightbulb color="#FC5B3F" size={18} />  <span className="inline-block pl-2"></span> About</a>
+          <a href="/career" className="mobile_navigation" style={{ display: 'flex'}} >
+           <BsBagFill color="#FC5B3F" size={18} />  <span className="inline-block pl-2">Career</span></a>
+          <a href="/contact" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsFillPersonFill color="#FC5B3F" size={18} />  <span className="inline-block pl-2">Contact</span> </a>
+          <a href="/blog" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsNewspaper color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Blog</span></a>
+          <a href="/education" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsFillBookFill color="#FC5B3F" size={18} />  <span className="inline-block pl-2">Education</span></a>
+          <a href="/customers" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsPeopleFill color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Customers</span></a>
+          <a href="/roadmap" className="mobile_navigation" style={{ display: 'flex'}}>
+          <BsFillSignIntersectionSideFill color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Roadmap</span></a>
         </nav>
       </div>
-    </header>
+    </header> 
   );
 }

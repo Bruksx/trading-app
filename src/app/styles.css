@@ -853,3 +853,9 @@
 }
 
 
+
+
+.mobile_navigation{
+  display: flex;
+  padding-top: 300px;
+}

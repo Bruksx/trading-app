@@ -4,7 +4,7 @@ import {AiOutlineFund} from "react-icons/ai"
 import {MdOutlinePendingActions} from "react-icons/md"
 import {AiOutlineUser} from "react-icons/ai"
 import {BiLogIn} from "react-icons/bi"
-import { redirect } from "next/navigation";
+
 import NavItem from "./navitem"
 
 export default function DashboardNav() {
