@@ -87,8 +87,7 @@ export default function Home() {
             <div className="text-blurb">
               <h1>Fully regulated</h1>
               <p>
-              Trading regulations vary from country to country and are designed to protect investors, maintain market integrity, and ensure fair and transparent trading practices. While I can provide some general information, it's important to note that specific regulations may differ depending on the jurisdiction.
-              We follow all regulations put in place by government bodies
+              {"Trading regulations vary from country to country and are designed to protect investors,maintain market integrity, and ensure fair and transparent trading practices. While I canprovide some general information, its important to note that specific regulations may differ depending on the jurisdiction. We follow all regulations put in place by government bodies"}
               </p>
             </div>
           </div>
@@ -100,7 +99,7 @@ export default function Home() {
             <div className="text-blurb">
               <h1>Financial Strength</h1>
               <p>
-              it's about having the resilience, stability, and agility to navigate through economic challenges and seize opportunities. It's the foundation that empowers individuals 
+              its about having the resilience, stability, and agility to navigate through economic challenges and seize opportunities. Its the foundation that empowers individuals 
               and organizations to weather storms, pursue growth, and build a secure future
               </p>
             </div>
@@ -196,7 +195,7 @@ export default function Home() {
         <div className="border-l-2 border-red-400 p-4">
           <div className="flex justify-between">
             <h2 className="text-xl font-bold">
-              Wall Street cautious on 'frothy' stocks, warn bitcoin bubble
+              Wall Street cautious on frothy stocks, warn bitcoin bubble
             </h2>
             <p className="ml-5 text-gray-500">Reuters</p>
           </div>
@@ -205,7 +204,7 @@ export default function Home() {
         <div className="border-l-2 border-red-400 p-4">
           <div className="flex justify-between">
             <h2 className="text-xl font-bold">
-              Wall Street cautious on 'frothy' stocks, warn bitcoin bubble
+              Wall Street cautious on frothy stocks, warn bitcoin bubble
             </h2>
             <p className="ml-9 text-gray-500">BBC</p>
           </div>
@@ -215,7 +214,7 @@ export default function Home() {
         <div className="border-l-2 border-red-400 p-4">
           <div className="flex justify-between">
             <h2 className="text-xl font-bold">
-              Wall Street cautious on 'frothy' stocks, warn bitcoin bubble
+              Wall Street cautious on frothy stocks, warn bitcoin bubble
             </h2>
             <p className="ml-9 text-gray-500">BBC</p>
           </div>
