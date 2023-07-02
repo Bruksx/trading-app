@@ -34,11 +34,9 @@ const images = [
             </h2>
             </div>
            <p className="text-gray-700">
-           Excepteur sint occaecat cupidatat non proident sunt in culpa qui anim officia.
+           At LarvaTrade, we recognize that every challenge presents an opportunity for growth and innovation. We constantly seek new avenues to expand our business, serve our customers better, and make a positive impact in the market
           </p>
-          <button className=" text-gray-400 font-bold py-2 mt-8 rounded">
-            WATCH THE VIDEO
-          </button>
+          
         </div>
         <div className="border-l-2 border-gray-300 p-4">
           <div className="flex justify-between">
@@ -47,11 +45,9 @@ const images = [
             </h2>
            </div>
           <p className="text-gray-700">
-          Excepteur sint occaecat cupidatat non proident sunt in culpa qui anim officia.
+          Our team is the driving force behind our success. We are proud to have a talented and diverse group of individuals who bring their unique skills, expertise, and perspectives to the table
            </p>
-           <button className=" text-gray-400 font-bold py-2 mt-8 rounded">
-            WATCH THE VIDEO
-          </button>
+           
         </div>
         <div className="border-l-2 border-gray-300 p-4">
           <div className="flex justify-between">
@@ -60,11 +56,9 @@ const images = [
             </h2>
            </div>
             <p className="text-gray-700">
-            Excepteur sint occaecat cupidatat non proident sunt in culpa qui anim officia.
+            At LarvaTrade, we foster a vibrant and inclusive company culture that promotes collaboration, innovation, and a sense of purpose. Our company culture is built upon a set of core values and beliefs that guide our behaviors, decisions, and interactions. Here is an overview of our company culture
           </p>
-          <button className=" text-gray-400 font-bold py-2 mt-8 rounded">
-            WATCH THE VIDEO
-          </button>
+          
         </div>
       </div>
 
@@ -72,58 +66,7 @@ const images = [
     <h1 className='heading-txt text-center text-3xl text-black font-bold mt-20'>Open positions</h1>
 </section>
 
-<section className='edu mx-auto container  py-10 border-b border-gray-300'>
-    <div className="section-flex">
-        <div className="first-grid">
-            <h1 className='scnd-1 text-lg px-2 font-bold text-black'>
-            Solutions engineer (entry level)</h1>
-        </div>
-    </div>
 
-    <div className="second-grid mr-16">
-        <p className='text-1xl text-gray-500 mr-8'>Stockholm, Sweden</p>
-    </div>
-
-    <div className="third-grid">
-        <button className='text-1xl text-white font-bold custom-button p-3 rounded'>APPLY FOR THIS JOB</button>
-    </div>
-</section>
-
-<section className='edu mx-auto container  py-10 border-b border-gray-300'>
-    <div className="section-flex">
-        <div className="first-grid">
-            <h1 className='scnd-1 text-lg px-2 font-bold text-black'>
-            Solutions engineer (entry level)
-            </h1>
-        </div>
-    </div>
-
-    <div className="second-grid mr-16">
-        <p className='text-1xl text-gray-500 mr-8'>Stockholm, Sweden</p>
-    </div>
-
-    <div className="third-grid">
-        <button className='text-1xl text-white font-bold custom-button p-3 rounded'>APPLY FOR THIS JOB</button>
-    </div>
-</section>
-
-<section className='edu mx-auto container  py-10 border-b border-gray-300'>
-    <div className="section-flex">
-        <div className="first-grid">
-            <h1 className='scnd-1 text-lg px-2 font-bold text-black'>
-            Solutions engineer (entry level)
-            </h1>
-        </div>
-    </div>
-
-    <div className="second-grid mr-16">
-        <p className='text-1xl text-gray-500 mr-8'>Stockholm, Sweden</p>
-    </div>
-
-    <div className="third-grid">
-        <button className='text-1xl text-white font-bold custom-button p-3 rounded'>APPLY FOR THIS JOB</button>
-    </div>
-</section>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto py-16 container max-w-5xl">
       {images.map((image, index) => (

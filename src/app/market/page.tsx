@@ -39,7 +39,7 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Market analysis</p>
-        <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="text-gray-600 text-white py-6">Detailed assessment of your business's target market and the competitive landscape within a specific industry</p>
       </div>
       <div className="grd-mkt  bg-purple-500 p-4 shadow-md rounded">
         <img
@@ -48,7 +48,7 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Enhanced tools</p>
-        <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="text-gray-600 text-white py-6">Placing funds money into various assets such as stocks, bonds, real estate, mutual funds, or other financial instruments, with the aim of growing wealth over time</p>
       </div>
     </div>
 
@@ -60,7 +60,7 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Investment advisory</p>
-        <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="text-gray-600 text-white py-6">Assessing your risk tolerance,  ability and willingness to endure fluctuations in the value of your investments.</p>
       </div>
       <div className="grd-mkt bg-neutral-500 p-4 shadow-md rounded">
         <img
@@ -69,7 +69,7 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Smart portfolio</p>
-        <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="text-gray-600 text-white py-6"> collection of financial assets specifically selected and managed for trading purposes</p>
       </div>
       <div className="grd-mkt bg-red-500 p-4 shadow-md rounded">
         <img
@@ -78,70 +78,11 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Mutual fund advisor</p>
-        <p className="text-gray-600 text-white py-6">Duis aute irure dolor in reprehen derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p className="text-gray-600 text-white py-6">provides guidance and management services for investment funds</p>
       </div>
     </div>
 
-    <div className="container mx-auto flex flex-wrap py-10">
-      {/* First side */}
-      <div className="w-full md:w-1/2 p-4">
-        <div className="flex items-start mr-8">
-          <img
-            src="/in-liquid-object-1.svg"
-            alt="Small Image"
-            className="hide-img w-40 h-40 mr-2"
-          />
-          <div className='px-30'>
-            <h2 className="heading-txt text-3xl font-bold">Why trade with Liquid?</h2>
-            <p className="heading-p text-gray-500 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation repudiandae ullamco.</p>
-            <div className="flex justify-left mt-4">
-          <ul className='hide-table'>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Direct Market Access (DMA)</a></li>
-            <li className='my-4'><a href="#"  className='text-gray-500 my-8'>Leverage up to 1:500</a></li>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>T+0 settlement</a></li>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Dividends paid in cash</a></li>
-          </ul>
-          <ul className='hide-table ml-5'>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Free from UK Stamp Duty</a></li>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Short selling available</a></li>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Commissions from 0.08%</a></li>
-            <li className='my-4'><a href="#" className='text-gray-500 my-8'>Access to 1500 global shares</a></li>
-          </ul>
-        </div>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Second side */}
-      <div className="w-full md:w-1/2 p-4">
-        <div>
-          <h2 className="heading-txt mg-b text-2xl font-bold">Our Shares offer</h2>
-          <table className="table-center mt-4 pt-10">
-            <thead>
-              <tr>
-                <th className="bg-gray-300 px-4 py-4 border-r border-gray-200">Name</th>
-                <th className="bg-gray-300 px-4 py-4">Initial Deposit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className=" bg-gray-200 px-4 py-4 border-r border-gray-200">Apple</td>
-                <td className="border bg-gray-200 px-4 py-4">10%</td>
-              </tr>
-              <tr>
-                <td className=" bg-white px-4 py-4 border-r border-l border-gray-200">Ali baba CFD</td>
-                <td className="border-r border-gray-200 bg-white px-4 py-4">10%</td>
-              </tr>
-              <tr>
-                <td className=" bg-gray-200 px-4 py-4 border-r border-gray-200">Facebook CFD</td>
-                <td className="border bg-gray-200 px-4 py-4">10%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    
 
     <div className="second-showcase flex justify-between bg-gray-200 px-20px">
       <div>
@@ -152,7 +93,7 @@ export default function Market() {
       </div>
       <div>
         <button className="btn-hide bg-transparent-500 hover:bg-gray-300 text-black font-bold py-3 px-8 border border-black border-solid rounded">
-          Open an account
+          <a href='/signup'>Open an account</a>
         </button>
       </div>
     </div>

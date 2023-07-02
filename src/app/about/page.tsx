@@ -43,15 +43,18 @@ export default function About() {
 <div className="hgh grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto container mb-20">
       <div className="bg-white rounded-lg p-6">
         <h2 className="text-xl font-bold mb-2">Philosophy</h2>
-        <p className="text-gray-600">At vero eos etme accusamus  iusto odio ent dignissimos  deleniti atque corrupti quos  ducimus moll quilla blanditiis expedita est distinctio..</p>
+        <p className="text-gray-600">At LarvaTrade, we believe in a set of core principles that guide our actions and define our company philosophy. 
+          These principles reflect our commitment to delivering exceptional products/services,
+           fostering a positive work culture, and creating long-term value for our customers, employees, and stakeholders</p>
       </div>
       <div className="bg-white rounded-lg p-6">
         <h2 className="text-xl font-bold mb-2">History</h2>
-        <p className="text-gray-600">At vero eos etme accusamus  iusto odio ent dignissimos  deleniti atque corrupti quos  ducimus moll quilla blanditiis expedita est distinctio..</p>
+        <p className="text-gray-600"> was founded in 1985  Since its humble beginnings, the company has grown steadily, evolving into a prominent player in its industry</p>
       </div>
       <div className="bg-white rounded-lg p-6">
         <h2 className="text-xl font-bold mb-2">Culture</h2>
-        <p className="text-gray-600">At vero eos etme accusamus  iusto odio ent dignissimos  deleniti atque corrupti quos  ducimus moll quilla blanditiis expedita est distinctio..</p>
+        <p className="text-gray-600">At LarvaTrade, we foster a vibrant and inclusive company culture that promotes collaboration, innovation, and a sense of purpose. Our company culture is built upon a set of core values and beliefs that
+         guide our behaviors, decisions, and interactions. Here is an overview of our company culture:</p>
        </div>
     </div>
 
@@ -69,18 +72,8 @@ export default function About() {
             <div>
               <p className='text-gray-400'>Cheif Executive Officer</p>
               <p className='heading-txt mb-4 mt-2 font-bold text-2xl'>Cynthia Taylor</p>
-              <p>Nostrum exercitationem ullam corporis suscipit labor samnisi ute aliquid fugiat.</p>
-              <div className="flex mt-5">
-                <a href="#" className="mr-2">
-                  <Image src="/facebook-icon.png" alt="Facebook" width={20} height={20} />
-                </a>
-                <a href="#" className="mr-2">
-                  <Image src="/twitter-icon.png" alt="Twitter" width={20} height={20} />
-                </a>
-                <a href="#">
-                  <Image src="/instagram-icon.png" alt="Instagram" width={20} height={20} />
-                </a>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -91,18 +84,8 @@ export default function About() {
             <div>
               <p className='text-gray-400'>Executive assistant</p>
               <p className='heading-txt mb-4 mt-2 font-bold text-2xl'>Arthur Parker</p>
-              <p>Nostrum exercitationem ullam corporis suscipit labor samnisi ute aliquid fugiat.</p>
-              <div className="flex mt-5">
-                <a href="#" className="mr-2">
-                  <Image src="/facebook-icon.png" alt="Facebook" width={20} height={20} />
-                </a>
-                <a href="#" className="mr-2">
-                  <Image src="/twitter-icon.png" alt="Twitter" width={20} height={20} />
-                </a>
-                <a href="#">
-                  <Image src="/instagram-icon.png" alt="Instagram" width={20} height={20} />
-                </a>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -114,18 +97,8 @@ export default function About() {
             <div>
               <p className='text-gray-400'>Cheif Executive Officer</p>
               <p className='heading-txt mb-4 mt-2 font-bold text-2xl'>Evelyn Mason</p>
-              <p>Nostrum exercitationem ullam corporis suscipit labor samnisi ute aliquid fugiat.</p>
-              <div className="flex mt-5">
-                <a href="#" className="mr-2">
-                  <Image src="/facebook-icon.png" alt="Facebook" width={20} height={20} />
-                </a>
-                <a href="#" className="mr-2">
-                  <Image src="/twitter-icon.png" alt="Twitter" width={20} height={20} />
-                </a>
-                <a href="#">
-                  <Image src="/instagram-icon.png" alt="Instagram" width={20} height={20} />
-                </a>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -136,18 +109,8 @@ export default function About() {
             <div>
               <p className='text-gray-400'>Executive assistant</p>
               <p className='heading-txt mb-4 mt-2 font-bold text-2xl'>Bryan Greene</p>
-              <p>Nostrum exercitationem ullam corporis suscipit labor samnisi ute aliquid fugiat.</p>
-              <div className="flex mt-5">
-                <a href="#" className="mr-2">
-                  <Image src="/facebook-icon.png" alt="Facebook" width={20} height={20} />
-                </a>
-                <a href="#" className="mr-2">
-                  <Image src="/twitter-icon.png" alt="Twitter" width={20} height={20} />
-                </a>
-                <a href="#">
-                  <Image src="/instagram-icon.png" alt="Instagram" width={20} height={20} />
-                </a>
-              </div>
+              
+              
             </div>
           </div>
         </div>
@@ -161,9 +124,7 @@ export default function About() {
          <h1 className='heading-bg text-6xl font-bold py-6'>We always ready <br />
 for a <span className='text-red-500'>challenge.</span> </h1>
         </div>
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-          Learn more
-        </button>
+        
       </div>
 
       <div className="max-w-lg bg-white rounded-lg p-8 ml-4">
