@@ -13,6 +13,7 @@ export default function Pending() {
   const api = new API();
   const [investments, setInvestments] = useState([]);
   useEffect(() => {
+    console.log("effects")
     api.investments(setInvestments, investments);
   }, [1]);
   return (

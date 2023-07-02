@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation"
+
 const baseUrl = "https://mrpacc.pythonanywhere.com/"
 
 class API{
@@ -67,7 +69,8 @@ class API{
             })
         }
 
-    invest(amount, password, setErrorText, setErrorTextClass, setBalance, balance){
+    invest(amount, password, setErrorText, setErrorTextClass, setBalance, balance, setShow3Dots){
+        setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Authorization", `Bearer ${this.token()}`);
@@ -90,10 +93,12 @@ class API{
                     setErrorTextClass("text-green-400")
                     setBalance(balance - amount)
                     this.updateUser()
+                    setShow3Dots(false)
                 }
                 if (result.code == 400){
                     setErrorTextClass("text-red-400")
                     setErrorText(result.message)
+                    setShow3Dots(false)
                 }
             })
         }
@@ -118,6 +123,7 @@ class API{
     }
 
     investments(setInvestments, investments){
+        //console.log("here2")
         var myHeaders = new Headers();
         myHeaders.append("Authorization", `Bearer ${this.token()}`)
 
@@ -132,11 +138,13 @@ class API{
             .then(result => {
                 result = JSON.parse(result)
                 setInvestments(result.investments)
+                //console.log(result.investments)
             })
             .catch(error => console.log('error', error));
     }
 
-    editAcount(first_name, middle_name, last_name, address, phone_number, bank_name, account_number){
+    editAcount(first_name, middle_name, last_name, address, phone_number, bank_name, account_number, setShow3Dots){
+        setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Authorization", `Bearer ${this.token()}`);
@@ -162,6 +170,8 @@ class API{
         .then(response => response.text())
         .then(result => {
             console.log(result)
+            setShow3Dots(false)
+            redirect("/profile")
         })
         .catch(error => console.log('error', error));
     }

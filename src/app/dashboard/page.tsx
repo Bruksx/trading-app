@@ -78,7 +78,7 @@ export default function Dashboard() {
                             </div>
                           </div>
                           <div className="text-3xl font-medium leading-8 mt-6">
-                            {balance}
+                            ${balance}
                           </div>
                           <div className="text-base text-slate-500 mt-1">
                             Balance
@@ -108,7 +108,7 @@ export default function Dashboard() {
                             {orders}
                           </div>
                           <div className="text-base text-slate-500 mt-1">
-                            Orders
+                            Active Trades
                           </div>
                         </div>
                       </div>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import useScrollDirection from "./hooks/scrolldirection";
 import "./dashboard.css";
 import React, { useEffect, useState } from 'react';
+import { redirect } from 'next/navigation';
 
 export default function MobileHeader(props) {
     const scrollDirection = useScrollDirection();
@@ -42,6 +43,12 @@ export default function MobileHeader(props) {
           <a href="/investment">Investment</a>
           <a href="/pending">Pending</a>
           <a href="/profile">Profile</a>
+          <a onClick={()=>{
+            console.log("here logout")
+            localStorage.removeItem("token") 
+            localStorage.removeItem("user")
+            redirect("/")
+          }}>Logout</a>
         </nav>
       </div>
     </div>

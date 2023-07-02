@@ -6,15 +6,19 @@ import MobileHeader from "../mobile-header";
 import DashboardNav from "../dashboardnav";
 import { useFormik } from "formik";
 import API from "../utils/api";
-import { ApiError } from "next/dist/server/api-utils";
 import { redirect } from "next/navigation";
+import { ThreeDots } from "react-loader-spinner";
 
-function handleClick(api:API){
-  api.updateUser()
+const style = {
+  display:"flex",
+  alignItems:"center",
+  justifyContent:"center"
 }
+
 
 export default function Profile() {
     const api = new API()
+    const [show3Dots,setShow3Dots] = useState(false);
     api.updateUser()
     let user:any = localStorage.getItem("user")
     if (!user){
@@ -61,92 +65,14 @@ export default function Profile() {
             <div className="col-span-12  lg:col-span-4 2xl:col-span-3 flex lg:block flex-col-reverse">
               <div className="intro-y box mt-5">
                 <div className="relative acct-info  flex items-center p-5">
-                  <div className="w-12 h-12 image-fit">
-                    <img
-                      alt="profile"
-                      className="rounded-full"
-                      src="../author-85z9UC.jpg"
-                    />
-                  </div>
                   <div className="ml-4 mr-auto">
                     <div className="font-medium text-base font-bold text-blue-800">
-                      Bruks
+                      {user.first_name}
                     </div>
-                    <div className="text-slate-500">Investor</div>
+                    <div className="text-slate-500">{user.last_name}</div>
                   </div>
                 </div>
-                <div className="p-5 border-t items-profile border-slate-200/60 dark:border-darkmode-400">
-                  <a className="flex items-center" href="">
-                    {" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      icon-name="activity"
-                      data-lucide="activity"
-                      className="lucide lucide-activity w-4 h-4 mr-2"
-                    >
-                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>{" "}
-                    Personal Information{" "}
-                  </a>
-                  <a className="flex items-center mt-5" href="">
-                    {" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      icon-name="activity"
-                      data-lucide="activity"
-                      className="lucide lucide-activity w-4 h-4 mr-2"
-                    >
-                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>{" "}
-                    Bank Account Info{" "}
-                  </a>
-                </div>
-                <div className="p-5 border-t  items-profile border-slate-200/60 dark:border-darkmode-400">
-                  <a className="flex items-center" href="">
-                    {" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      icon-name="lock"
-                      data-lucide="lock"
-                      className="lucide lucide-lock w-4 h-4 mr-2"
-                    >
-                      <rect
-                        x="3"
-                        y="11"
-                        width="18"
-                        height="11"
-                        rx="2"
-                        ry="2"
-                      ></rect>
-                      <path d="M7 11V7a5 5 0 0110 0v4"></path>
-                    </svg>{" "}
-                    Change Password{" "}
-                  </a>
-                </div>
+                
               </div>
             </div>
 
@@ -183,10 +109,9 @@ export default function Profile() {
                               onChange={formik.handleChange}
                               id="update-profile-form-5"
                               className="form-control"
-                              placeholder="Adress"
+                              placeholder="Address"
                             >
-                              10 Anson Road, International Plaza, #10-11, 079903
-                              Singapore, Singapore
+                              
                             </textarea>
                           </div>
                         </div>
@@ -203,6 +128,21 @@ export default function Profile() {
                             />
                           </div>
                         </div>
+
+                        <div className="col-span-12 2xl:col-span-6">
+                          <div className="mt-3">
+                            <label className="form-label">Email</label>
+                            <input
+                              name="account_number"
+                              value={user.email}
+                              onChange={formik.handleChange}
+                              type="text"
+                              placeholder="Account name"
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+
                         <div className="col-span-12 2xl:col-span-6">
                           <div className="mt-3">
                             <label className="form-label">First Name</label>
@@ -270,11 +210,12 @@ export default function Profile() {
                             formik.values.address,
                             formik.values.phone_number,
                             formik.values.bank_name,
-                            formik.values.account_number
+                            formik.values.account_number,
+                            setShow3Dots,
                           );
                         }}
                       >
-                        Update
+                        {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Update"}
                       </button>
                     </div>
                   </div>

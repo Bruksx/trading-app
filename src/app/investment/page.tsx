@@ -8,6 +8,15 @@ import DashboardNav from "../dashboardnav";
 import API from "../utils/api";
 import { useFormik} from "formik";
 import { redirect } from "next/navigation";
+import { ThreeDots } from "react-loader-spinner";
+
+const style = {
+  display:"flex",
+  alignItems:"center",
+  justifyContent:"center",
+  width:"40px",
+  height:"22px",
+}
 
 function handleClick(
   api: API,
@@ -16,7 +25,8 @@ function handleClick(
   amount: any,
   password: any,
   setBalance: Function,
-  balance: any
+  balance: any,
+  setShow3Dots:Function,
 ) {
   setErrorText("")
   api.invest(
@@ -25,7 +35,8 @@ function handleClick(
     setErrorText,
     setErrorTextClass,
     setBalance,
-    balance
+    balance,
+    setShow3Dots,
   );
 }
 
@@ -35,6 +46,7 @@ export default function Investment() {
   }
   const api = new API()
   let user:any = JSON.parse(localStorage.getItem("user"));
+  const [show3Dots,setShow3Dots] = useState(false);
   const [errorText, setErrorText] = useState("")
   const [errorTextClass, setErrorTextClass] = useState("text-red-400")
   const [balance, setBalance] = useState(user.balance)
@@ -142,9 +154,10 @@ export default function Investment() {
                     <button 
                         className="btn btn-primary mt-5"
                         onClick={()=>{
-                          handleClick(api, setErrorText, setErrorTextClass, formik.values.amount, formik.values.password, setBalance, balance)
+                          handleClick(api, setErrorText, setErrorTextClass, formik.values.amount, formik.values.password, setBalance, balance, setShow3Dots)
                         }}
-                        >Invest
+                        >
+                        {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Invest"}
                     </button>
                 
                     <p className={errorTextClass}>{errorText}</p>
