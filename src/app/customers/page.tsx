@@ -68,7 +68,7 @@ export default function Customers() {
 
     <div className="section-flex-customers container mx-auto">
     <div className="blog-categories test-mobile w-2/4 container mx-auto shadow shadow-lg hover:shadow-lg">
-                    <h1 className='text-gray-500 text-lg mb-6 cat-h1'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+                    <h1 className='text-gray-500 text-lg mb-6 cat-h1'>The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
                         <div className="ctgry mt-12">
                           <div>
                             <img src="/in-client-testi-1.svg" className='w-1/4' alt="image"/>
@@ -82,7 +82,7 @@ export default function Customers() {
                         </div>
         </div>
         <div className="blog-categories test-mobile-this w-2/4 container mx-auto shadow shadow-lg ml-12 hover:shadow-lg">
-                    <h1 className='text-gray-500 text-lg mb-6 cat-h1'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+                    <h1 className='text-gray-500 text-lg mb-6 cat-h1'>The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
                         <div className="ctgry mt-12">
                           <div>
                             <img src="/in-client-testi-2.svg" className='w-1/4' alt="image"/>
@@ -103,7 +103,7 @@ export default function Customers() {
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
-      <h1 className='text-gray-500 mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+      <h1 className='text-gray-500 mb-6 cat-h1 w-full'>The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
             <div className="ctgry mt-12">
               <div>
                 <p className='mt-3 font-bold text-lg text-black'>Melvin Cortez</p>
@@ -116,7 +116,7 @@ export default function Customers() {
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
-      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
             <div className="ctgry mt-12">
               <div>
                 <p className='mt-3 font-bold text-lg text-black'>Melvin Cortez</p>
@@ -129,7 +129,7 @@ export default function Customers() {
     <div className="flex justify-start">
         <img className="this-img mb-14" src="/in-client-testi-2.svg" alt="image" />
     </div>
-      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>"The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
+      <h1 className='text-gray-500  mb-6 cat-h1 w-full'>The extension makes collecting feedback so much easier! Shipright then really helps us make decisions based on the data we collected.</h1>
             <div className="ctgry mt-12">
               <div>
                 <p className='mt-3 font-bold text-lg text-black'>Melvin Cortez</p>

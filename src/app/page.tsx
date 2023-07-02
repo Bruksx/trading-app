@@ -51,7 +51,7 @@ export default function Home() {
             Market analysis
           </p>
           <p className="text-gray-600 text-white py-6">
-          detailed assessment of your business's target market and the competitive 
+          detailed assessment of your business target market and the competitive 
           landscape within a specific industry
           </p>
         </div>

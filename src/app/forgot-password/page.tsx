@@ -67,7 +67,7 @@ const ForgotPassword = () => {
           </div>
           <p className="text-red-400"></p>
           <h2 className="text-white px-4 color mt-10 text-sm no-class">
-            Don't have an account?{" "}
+            Dont have an account?{" "}
             <span className="font-bold">
               <a href="/register">Register here</a>
             </span>

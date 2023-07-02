@@ -64,7 +64,7 @@ export default function Pending() {
                       <tbody>
                         {investments.map((investment: any) => {
                           return (
-                            <tr className="intro-x">
+                            <tr key={investment.uid}className="intro-x">
                               <td className="w-40">
                                 <div className="flex">
                                   <p className="font-bold whitespace-nowrap">

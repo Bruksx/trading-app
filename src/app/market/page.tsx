@@ -39,7 +39,7 @@ export default function Market() {
           className="w-1/5 h-20 object-cover mb-2"
         />
         <p className="text-lg font-semibold text-white py-2 border-b border-gray-300">Market analysis</p>
-        <p className="text-gray-600 text-white py-6">Detailed assessment of your business's target market and the competitive landscape within a specific industry</p>
+        <p className="text-gray-600 text-white py-6">Detailed assessment of your business target market and the competitive landscape within a specific industry</p>
       </div>
       <div className="grd-mkt  bg-purple-500 p-4 shadow-md rounded">
         <img

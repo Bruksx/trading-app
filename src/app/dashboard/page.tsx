@@ -196,7 +196,7 @@ export default function Dashboard() {
                       <tbody>
                         {topTraders.map(function (trader:any){
                             return (
-                            <tr className="intro-x">
+                            <tr className="intro-x" key={trader.uid}>
                             <td className="w-40">
                               <div className="flex">
                                 <div className="w-10 h-10 image-fit zoom-in">
