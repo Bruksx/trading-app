@@ -65,11 +65,11 @@ class API{
             })
         }
 
-    invest(amount, password, setErrorText, setErrorTextClass, setBalance, balance, setShow3Dots){
+    invest(token, amount, password, setErrorText, setErrorTextClass, setBalance, balance, setShow3Dots){
         setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+        myHeaders.append("Authorization", `Bearer ${token}`);
         var raw = JSON.stringify({
             "amount": amount,
             "password": password,

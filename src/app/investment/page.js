@@ -20,6 +20,7 @@ const style = {
 }
 
 function handleClick(
+  token,
   api,
   setErrorText,
   setErrorTextClass,
@@ -31,6 +32,7 @@ function handleClick(
 ) {
   setErrorText("")
   api.invest(
+    token,
     amount,
     password,
     setErrorText,
@@ -43,6 +45,7 @@ function handleClick(
 
 export default function Investment() {
   const api = new API()
+  const [token, setToken] = useLocalStorage("token", "")
   let [user, setUser] = useLocalStorage("user", {})
   const [show3Dots,setShow3Dots] = useState(false);
   const [errorText, setErrorText] = useState("")
@@ -151,7 +154,7 @@ export default function Investment() {
                     <button 
                         className="btn btn-primary mt-5"
                         onClick={()=>{
-                          handleClick(api, setErrorText, setErrorTextClass, formik.values.amount, formik.values.password, setBalance, balance, setShow3Dots)
+                          handleClick(token ,api, setErrorText, setErrorTextClass, formik.values.amount, formik.values.password, setBalance, balance, setShow3Dots)
                         }}
                         >
                         {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Invest"}
