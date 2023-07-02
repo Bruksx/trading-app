@@ -29,7 +29,7 @@ export default function Contact() {
              <input type="text" id="subject" placeholder='Subject' className="w-full border border-gray-300 rounded px-3 py-2" />
           </div>
           <div className="mb-4">
-             <textarea id="message" placeholder='Message' className="w-full border border-gray-300 rounded px-3 py-2" rows="4"></textarea>
+             <textarea id="message" placeholder='Message' className="w-full border border-gray-300 rounded px-3 py-2" rows={4}></textarea>
           </div>
           <button type="submit" className="bg-red-500 w-full text-white px-4 py-2 rounded">Send Message</button>
         </form>
