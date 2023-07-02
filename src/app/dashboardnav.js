@@ -30,6 +30,7 @@ export default function DashboardNav() {
           localStorage.removeItem("token") 
           localStorage.removeItem("user");
           window.location.href = "/"; // Redirect to Homepage'
+          
         }}/>
       </ul>
     </nav>
