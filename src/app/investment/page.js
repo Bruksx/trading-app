@@ -19,14 +19,14 @@ const style = {
 }
 
 function handleClick(
-  api: API,
-  setErrorText: Function,
-  setErrorTextClass: Function,
-  amount: any,
-  password: any,
-  setBalance: Function,
-  balance: any,
-  setShow3Dots:Function,
+  api,
+  setErrorText,
+  setErrorTextClass,
+  amount,
+  password,
+  setBalance,
+  balance,
+  setShow3Dots,
 ) {
   setErrorText("")
   api.invest(
@@ -45,13 +45,13 @@ export default function Investment() {
     redirect("/login")
   }
   const api = new API()
-  let user:any = JSON.parse(localStorage.getItem("user"));
+  let user = JSON.parse(localStorage.getItem("user"));
   const [show3Dots,setShow3Dots] = useState(false);
   const [errorText, setErrorText] = useState("")
   const [errorTextClass, setErrorTextClass] = useState("text-red-400")
   const [balance, setBalance] = useState(user.balance)
   console.log(user)
-  const formik:any = useFormik({
+  const formik = useFormik({
     initialValues:{
         "amount":"",
         "password":"",
