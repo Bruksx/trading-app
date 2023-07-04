@@ -6,18 +6,18 @@ import { ShoppingCart, CreditCard, Monitor, User } from "lucide-react";
 import MobileHeader from "../mobile-header";
 import DashboardNav from "../dashboardnav";
 import API from "../utils/api";
-import { useFormik} from "formik";
+import { useFormik } from "formik";
 import { redirect } from "next/navigation";
 import { ThreeDots } from "react-loader-spinner";
-import useLocalStorage from "../utils/uselocalstorage"
+import useLocalStorage from "../utils/uselocalstorage";
 
 const style = {
-  display:"flex",
-  alignItems:"center",
-  justifyContent:"center",
-  width:"40px",
-  height:"22px",
-}
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "40px",
+  height: "22px",
+};
 
 function handleClick(
   token,
@@ -28,9 +28,9 @@ function handleClick(
   password,
   setBalance,
   balance,
-  setShow3Dots,
+  setShow3Dots
 ) {
-  setErrorText("")
+  setErrorText("");
   api.invest(
     token,
     amount,
@@ -39,25 +39,25 @@ function handleClick(
     setErrorTextClass,
     setBalance,
     balance,
-    setShow3Dots,
+    setShow3Dots
   );
 }
 
 export default function Investment() {
-  const api = new API()
-  const [token, setToken] = useLocalStorage("token", "")
-  let [user, setUser] = useLocalStorage("user", {})
-  const [show3Dots,setShow3Dots] = useState(false);
-  const [errorText, setErrorText] = useState("")
-  const [errorTextClass, setErrorTextClass] = useState("text-red-400")
-  const [balance, setBalance] =  useState(user.balance)
+  const api = new API();
+  const [token, setToken] = useLocalStorage("token", "");
+  let [user, setUser] = useLocalStorage("user", {});
+  const [show3Dots, setShow3Dots] = useState(false);
+  const [errorText, setErrorText] = useState("");
+  const [errorTextClass, setErrorTextClass] = useState("text-red-400");
+  const [balance, setBalance] = useState(user.balance);
   const formik = useFormik({
-    initialValues:{
-        "amount":"",
-        "password":"",
+    initialValues: {
+      amount: "",
+      password: "",
     },
-    onSubmit:(values)=>{}
-  })
+    onSubmit: (values) => {},
+  });
   return (
     <main className="py-5">
       <MobileHeader />
@@ -114,56 +114,72 @@ export default function Investment() {
             <div className="intro-y box rom mt-12 w-1/2">
               <div id="form-validation" className="p-5">
                 <div className="preview">
-                  
-                    <div className="input-form">
-                      <label className="form-label w-full flex flex-col sm:flex-row">
-                        {" "}
-                        Amount{" "}
-                        <span className="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">
-                          Required*
-                        </span>{" "}
-                      </label>
-                      <input
-                        id="validation-form-1"
-                        type="text"
-                        name="amount"
-                        className="form-control text-black"
-                        placeholder="100,000"
-                        value={formik.values.amount}
-                        onChange={formik.handleChange}
+                  <div className="input-form">
+                    <label className="form-label w-full flex flex-col sm:flex-row">
+                      {" "}
+                      Amount{" "}
+                      <span className="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">
+                        Required*
+                      </span>{" "}
+                    </label>
+                    <input
+                      id="validation-form-1"
+                      type="text"
+                      name="amount"
+                      className="form-control text-black"
+                      placeholder="100,000"
+                      value={formik.values.amount}
+                      onChange={formik.handleChange}
+                    />
+                  </div>
+                  <div className="input-form mt-3">
+                    <label className="form-label w-full flex flex-col sm:flex-row">
+                      {" "}
+                      Password{" "}
+                      <span className="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">
+                        Required*
+                      </span>{" "}
+                    </label>
+                    <input
+                      id="validation-form-3"
+                      type="password"
+                      name="password"
+                      className="form-control text-black"
+                      placeholder="secret"
+                      value={formik.values.password}
+                      onChange={formik.handleChange}
+                    />
+                  </div>
+                  <button
+                    className="btn btn-primary mt-5"
+                    onClick={() => {
+                      handleClick(
+                        token,
+                        api,
+                        setErrorText,
+                        setErrorTextClass,
+                        formik.values.amount,
+                        formik.values.password,
+                        setBalance,
+                        balance,
+                        setShow3Dots
+                      );
+                    }}
+                  >
+                    {show3Dots ? (
+                      <ThreeDots
+                        height="25"
+                        color="white"
+                        wrapperStyle={style}
                       />
-                    </div>
-                    <div className="input-form mt-3">
-                      <label className="form-label w-full flex flex-col sm:flex-row">
-                        {" "}
-                        Password{" "}
-                        <span className="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">
-                          Required*
-                        </span>{" "}
-                      </label>
-                      <input
-                        id="validation-form-3"
-                        type="password"
-                        name="password"
-                        className="form-control text-black"
-                        placeholder="secret"
-                        value={formik.values.password}
-                        onChange={formik.handleChange}
-                      />
-                    </div>
-                    <button 
-                        className="btn btn-primary mt-5"
-                        onClick={()=>{
-                          handleClick(token ,api, setErrorText, setErrorTextClass, formik.values.amount, formik.values.password, setBalance, balance, setShow3Dots)
-                        }}
-                        >
-                        {show3Dots? <ThreeDots height="25" color="white" wrapperStyle={style}/>: "Invest"}
-                    </button>
-                
-                    <p className={errorTextClass}>{errorText}</p>
-                    </div>
-                  
-                   
+                    ) : (
+                      "Invest"
+                    )}
+                  </button>
+
+                  <p className={errorTextClass}>{errorText}</p>
+                </div>
+
                 <div className="source-code hidden">
                   <button
                     data-target="#copy-form-validation"
@@ -189,7 +205,6 @@ export default function Investment() {
                     </svg>{" "}
                     Copy example code{" "}
                   </button>
-                  
                 </div>
               </div>
             </div>
