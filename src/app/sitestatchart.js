@@ -1,7 +1,7 @@
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { useState, useEffect } from "react";
-import PieChart from "./piechart";
+import PieChart from "./visitorchart";
 import getRndInteger from "./utils/rand";
 
 

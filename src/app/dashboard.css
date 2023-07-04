@@ -17318,6 +17318,7 @@ html body{
   flex-direction: row;
   justify-content: space-around;
   width: fit-content ;
+  flex-wrap: wrap;
 }
 
 .card{
@@ -17325,6 +17326,7 @@ html body{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .progress-bar-container{
