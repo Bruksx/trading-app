@@ -3,10 +3,6 @@ import { redirect } from "next/navigation"
 const baseUrl = "https://mrpacc.pythonanywhere.com/"
 
 class API{
-    token(){
-        return localStorage.getItem("token")
-    }
-
     async register(email, password, password2){
         let myHeaders = new Headers()
         myHeaders.append("Content-Type", "application/json")
@@ -48,7 +44,7 @@ class API{
 
     async dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders){
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxMDMyODEwODgxNCwiaWF0IjoxNjg4MTA4ODE0LCJqdGkiOiIzOGY1NGFkNmRkN2I0ODVhYTg4NGY4NmI4MDc4ODNkMiIsInVzZXJfaWQiOjF9.v8e9jCO4zLdVN9AmtxTl5RS_A8qNlWc6n5fv9sZIHHQ");
+        myHeaders.append("Authorization", `Bearer ${token}`);
 
         var requestOptions = {
             method: 'GET',
@@ -69,11 +65,11 @@ class API{
             })
         }
 
-    invest(amount, password, setErrorText, setErrorTextClass, setBalance, balance, setShow3Dots){
+    invest(token, amount, password, setErrorText, setErrorTextClass, setBalance, balance, setShow3Dots){
         setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+        myHeaders.append("Authorization", `Bearer ${token}`);
         var raw = JSON.stringify({
             "amount": amount,
             "password": password,
@@ -103,9 +99,9 @@ class API{
             })
         }
     
-    updateUser(){
+    updateUser(token, setUser){
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+        myHeaders.append("Authorization", `Bearer ${token}`);
 
         var requestOptions = {
             method: 'GET',
@@ -118,14 +114,15 @@ class API{
             .then(result => {
                 let user = JSON.parse(result).user
                 console.log(user)
-                localStorage.setItem("user", JSON.stringify(user))
+                //localStorage.setItem("user", JSON.stringify(user))
+                setUser(JSON.parse(user))
             })
     }
 
-    investments(setInvestments, investments){
+    investments(token, setInvestments){
         //console.log("here2")
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", `Bearer ${this.token()}`)
+        myHeaders.append("Authorization", `Bearer ${token}`)
 
         var requestOptions = {
             method: 'GET',
@@ -143,11 +140,11 @@ class API{
             .catch(error => console.log('error', error));
     }
 
-    editAcount(first_name, middle_name, last_name, address, phone_number, bank_name, account_number, setShow3Dots){
+    editAcount(token, first_name, middle_name, last_name, address, phone_number, bank_name, account_number, setShow3Dots){
         setShow3Dots(true)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", `Bearer ${this.token()}`);
+        myHeaders.append("Authorization", `Bearer ${token}`);
 
         var raw = JSON.stringify({
             "first_name": first_name,

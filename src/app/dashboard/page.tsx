@@ -9,21 +9,20 @@ import { MdAccountBalanceWallet, MdSavings } from "react-icons/md";
 import { useToken } from "../hooks/hooks";
 import { useRouter } from "next/navigation";
 import API from "../utils/api";
+import useLocalStorage from "../utils/uselocalstorage";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import 'react-circular-progressbar/dist/styles.css';
+import MyChart from "../sitestatchart";
 
 export default function Dashboard() {
   const api = new API();
   const router = useRouter();
-  let token = localStorage.getItem("token");
-  const [balance, setBalance] = useState("")
+  const [balance, setBalance] = useState(0)
   const [orders, setOrders] = useState(0)
   const [totalProfit, setTotalProfit] = useState(0)
   const [topTraders, setTopTraders] = useState([])
-  if (!token) {
-    router.push("/login");
-  }
-  useEffect(()=>{
-    let data = api.dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders)
-  }, [1])
+  const [token, setToken] = useLocalStorage("token")
+  useEffect(()=>{let data = api.dashboard(token, setBalance, setOrders, setTotalProfit, setTopTraders);}, [])
   
   return (
     <main className="py-5">
@@ -69,7 +68,6 @@ export default function Dashboard() {
                                 className="report-box__indicator bg-success tooltip cursor-pointer"
                                 title="33% Higher than last month"
                               >
-                                
                                 <i
                                   data-lucide="chevron-up"
                                   className="w-4 h-4 ml-0.5"
@@ -96,7 +94,6 @@ export default function Dashboard() {
                                 className="report-box__indicator bg-danger tooltip cursor-pointer"
                                 title="2% Lower than last month"
                               >
-                                
                                 <i
                                   data-lucide="chevron-down"
                                   className="w-4 h-4 ml-0.5"
@@ -123,7 +120,6 @@ export default function Dashboard() {
                                 className="report-box__indicator bg-success tooltip cursor-pointer"
                                 title="12% Higher than last month"
                               >
-                                
                                 <i
                                   data-lucide="chevron-up"
                                   className="w-4 h-4 ml-0.5"
@@ -154,7 +150,6 @@ export default function Dashboard() {
                                 className="report-box__indicator bg-success tooltip cursor-pointer"
                                 title="22% Higher than last month"
                               >
-                                
                                 <i
                                   data-lucide="chevron-up"
                                   className="w-4 h-4 ml-0.5"
@@ -174,10 +169,66 @@ export default function Dashboard() {
                   </div>
                 </div>
 
+              <div className="statistics">
+
+                <div className="card">
+                  <div className="progress-bar-container">
+                    <div className="progress-bar intro-y">
+                      <CircularProgressbar
+                        minValue={3}
+                        value={56}
+                        maxValue={100}
+                        text="4"
+                        strokeWidth={4}
+                        background
+                        styles={buildStyles({
+                          backgroundColor:"#223044",
+                          pathTransitionDuration:0.7,
+                          trailColor:"orange",
+                          textSize:"13px"
+                        })}
+                      />
+                    </div>
+                    <p>Total Trades</p>
+                  </div>
+                  <div className="under"></div>
+                </div>
+
+                
+
+                <div className="card">
+                  <div className="progress-bar-container">
+                    <div className="progress-bar intro-y">
+                      <CircularProgressbar
+                        minValue={3}
+                        value={56}
+                        maxValue={100}
+                        text="4"
+                        strokeWidth={4}
+                        background
+                        styles={buildStyles({
+                          backgroundColor:"#223044",
+                          pathTransitionDuration:0.7,
+                          trailColor:"orange",
+                          textSize:"13px"
+                        })}
+                      />
+                    </div>
+                    <p>Withdrawals</p>
+                  </div>
+                  <div className="under"></div>
+                </div>
+
+                <div>
+                  <MyChart/>
+                </div>
+
+              </div>
+
                 <div className="col-span-12 mt-6">
                   <div className="intro-y block sm:flex items-center h-10">
                     <h2 className="text-lg font-medium truncate mr-5">
-                      Weekly Top Traders
+                      Our Top Traders
                     </h2>
                   </div>
                   <div className="intro-y overflow-auto lg:overflow-visible mt-8 sm:mt-0">
@@ -188,44 +239,63 @@ export default function Dashboard() {
                           <th className="whitespace-nowrap font-bold">
                             TRADER NAME
                           </th>
+                          <th>
+                            PREFFERED ASSETS
+                          </th>
                           <th className="text-center whitespace-nowrap font-bold">
                             STATUS
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                        {topTraders.map(function (trader:any){
-                            return (
-                            <tr className="intro-x">
-                            <td className="w-40">
-                              <div className="flex">
-                                <div className="w-10 h-10 image-fit zoom-in">
-                                  <img
-                                    alt="img"
-                                    className="tooltip rounded-full"
-                                    src={trader.avatar}
-                                    title="Uploaded at 3 June 2020"
-                                  />
+                        {topTraders.map(function (trader: any) {
+                          return (
+                            <tr className="intro-x" key={trader}>
+                              <td className="w-40">
+                                <div className="flex">
+                                  <div className="w-10 h-10 image-fit zoom-in">
+                                    <img
+                                      alt="img"
+                                      className="tooltip rounded-full"
+                                      src={trader.avatar}
+                                      title="Uploaded at 3 June 2020"
+                                    />
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                            <td>
-                              <a href="" className="font-bold whitespace-nowrap">
-                                {trader.first_name} {trader.last_name}
-                              </a>
-                            </td>
-                            <td className="w-40">
-                              <div className="flex items-center justify-center text-success font-bold">
-                                {" "}
-                                <i
-                                  data-lucide="check-square"
-                                  className="w-4 h-4 mr-2"
-                                ></i>{" "}
-                                Active{" "}
-                              </div>
-                            </td>
-                          </tr>
-                            )
+                              </td>
+                              <td>
+                                <a
+                                  href=""
+                                  className="font-bold whitespace-nowrap"
+                                >
+                                  {trader.first_name} {trader.last_name}
+                                </a>
+                              </td>
+                              <td>
+                                <div className="flex">
+                                  <div className="w-10 h-10 image-fit zoom-in">
+                                    <img className="tooltip rounded-full" src="doge.jfif"/>
+                                  </div>
+                                  <div className="w-10 h-10 image-fit zoom-in">
+                                    <img className="tooltip rounded-full" src="solana.png"/>
+                                  </div>
+                                  <div className="w-10 h-10 image-fit zoom-in">
+                                    <img className="tooltip rounded-full" src="btc.png"/>
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="w-40">
+                                <div className="flex items-center justify-center text-success font-bold">
+                                  {" "}
+                                  <i
+                                    data-lucide="check-square"
+                                    className="w-4 h-4 mr-2"
+                                  ></i>{" "}
+                                  Active{" "}
+                                </div>
+                              </td>
+                            </tr>
+                          );
                         })}
                       </tbody>
                     </table>

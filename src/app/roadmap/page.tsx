@@ -10,7 +10,7 @@ export default function Customers() {
     <Header/>
       <section>
             <div className='text-center mx-auto container px-8 py-8'>
-            <h1 className='heading-txt text-4xl font-bold'>We're constantly updating our <span className='text-red-500'>roadmap.</span> </h1>
+            <h1 className='heading-txt text-4xl font-bold'>We are constantly updating our <span className='text-red-500'>roadmap.</span> </h1>
             <p className="text-gray-500 mt-4">Bring transparency for our users and to get your feedback - keep up to date with upcoming products, services, and helpful resources.</p>
             <p className="text-gray-500 mt-4">You can follow our progress here or follow us on Twitter <span className='text-red-500 font-bold'>@liquid-x</span></p>
             </div>

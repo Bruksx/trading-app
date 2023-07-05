@@ -8,6 +8,7 @@ import { useFormik } from "formik";
 import API from "../utils/api";
 import { redirect } from "next/navigation";
 import { ThreeDots } from "react-loader-spinner";
+import useLocalStorage from "../utils/uselocalstorage";
 
 const style = {
   display:"flex",
@@ -19,11 +20,9 @@ const style = {
 export default function Profile() {
     const api = new API()
     const [show3Dots,setShow3Dots] = useState(false);
-    api.updateUser()
-    let user:any = localStorage.getItem("user")
-    if (!user){
-      redirect("/login")
-    }
+    const [token, setToken] = useLocalStorage("token", "")
+    let [user, setUser] = useLocalStorage("user","{}")
+    console.log(user)
     user = JSON.parse(user)
     const formik = useFormik({
         initialValues:{
@@ -204,6 +203,7 @@ export default function Profile() {
                         className="btn btn-primary w-20 mt-3"
                         onClick={() => {
                           api.editAcount(
+                            token,
                             formik.values.first_name,
                             formik.values.middle_name,
                             formik.values.last_name,

@@ -21,7 +21,7 @@ const images = [
       <Header/>
 <section>
 <div className='text-center mx-auto container px-8 py-8'>
-   <h1 className='heading-txt text-3xl font-bold'>We're a team of mission-driven <span className='text-red-500'>experts & learners.</span> </h1>
+   <h1 className='heading-txt text-3xl font-bold'>{"We're a team of mission-driven"} <span className='text-red-500'>experts & learners.</span> </h1>
    <p className="heading-p text-gray-500 mt-4">Who are committed to making security a strength for every startup.</p>
 </div>
 </section> 

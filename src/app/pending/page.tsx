@@ -7,14 +7,15 @@ import { ShoppingCart, CreditCard, Monitor, User } from "lucide-react";
 import DashboardNav from "../dashboardnav";
 import API from "../utils/api";
 import Investment from "../investment/page";
+import useLocalStorage from "../utils/uselocalstorage";
 
 export default function Pending() {
   console.log("here");
   const api = new API();
+  const [token, setToken] = useLocalStorage("token")
   const [investments, setInvestments] = useState([]);
   useEffect(() => {
-    console.log("effects")
-    api.investments(setInvestments, investments);
+    api.investments(token, setInvestments);
   }, [1]);
   return (
     <main className="py-5">
@@ -65,7 +66,7 @@ export default function Pending() {
                       <tbody>
                         {investments.map((investment: any) => {
                           return (
-                            <tr className="intro-x">
+                            <tr key={investment.uid}className="intro-x">
                               <td className="w-40">
                                 <div className="flex">
                                   <p className="font-bold whitespace-nowrap">

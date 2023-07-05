@@ -118,7 +118,7 @@ const LoginPage = () => {
           </div>
           <p className={errorTextClass}>{errorText}</p>
           <h2 className="text-white px-4 color mt-10 text-sm">
-            Don't have an account?{" "}
+            Dont have an account?{" "}
             <span className="font-bold">
               <a href="/register">Register here</a>
             </span>
