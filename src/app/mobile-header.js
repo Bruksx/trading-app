@@ -5,6 +5,7 @@ import "./dashboard.css";
 import {BsBox, BsGraphUp, BsFillClockFill, BsFillPersonFill, BsPersonDown } from "react-icons/bs";
 import React, { useEffect, useState } from 'react';
 import useLocalStorage from './utils/uselocalstorage';
+import { CreditCard } from 'lucide-react';
 
 export default function MobileHeader(props) {
     const [token, setToken] = useLocalStorage("token")
@@ -45,6 +46,8 @@ export default function MobileHeader(props) {
            <BsBox color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Dashboard</span></a>
           <a href="/investment" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsGraphUp color="#FFFFFF" size={18} />  <span className="inline-block pl-2">Investment</span></a>
+           <a href="/deposit" className="mobile_navigation" style={{ display: 'flex'}}>
+            <CreditCard color="#FFFFFF" size={18} />  <span className="inline-block pl-2">Deposit</span></a>
           <a href="/pending" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsFillClockFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Pending</span></a>
           <a href="/profile" className="mobile_navigation" style={{ display: 'flex'}}>
