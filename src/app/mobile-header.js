@@ -43,11 +43,15 @@ export default function MobileHeader(props) {
         <nav className="mobile-menu-nav">
         <a href="/dashboard" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsBox color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Dashboard</span></a>
+           <a href="/financials" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsGraphUp color="#FFFFFF" size={18} />  <span className="inline-block pl-2">Financials</span></a>
           <a href="/investment" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsGraphUp color="#FFFFFF" size={18} />  <span className="inline-block pl-2">Investment</span></a>
           <a href="/pending" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsFillClockFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Pending</span></a>
-          <a href="/profile" className="mobile_navigation" style={{ display: 'flex'}}>
+           <a href="/pending" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsFillClockFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">History</span></a>
+          <a href="/history" className="mobile_navigation" style={{ display: 'flex'}}>
           <BsFillPersonFill color="#FFFFFF" size={18} /> <span className="inline-block pl-2">Profile</span></a>
           <a href="#" className="mobile_navigation" style={{ display: 'flex'}} onClick={()=>{
             setToken("")
