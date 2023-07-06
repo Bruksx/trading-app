@@ -56,6 +56,7 @@ export default function Pending() {
                         <tr>
                           <th className="whitespace-nowrap font-bold">DATE</th>
                           <th className="whitespace-nowrap font-bold">PRICE</th>
+                          <th className="whitespace-nowrap font-bold">CRYPTOCURRENCY</th>
                           <th className="whitespace-nowrap font-bold">ROI</th>
                           <th className="text-center whitespace-nowrap font-bold">
                             STATUS
@@ -81,6 +82,14 @@ export default function Pending() {
                                   className="font-bold whitespace-nowrap"
                                 >
                                   ${investment.amount}
+                                </a>
+                              </td>
+                              <td>
+                                <a
+                                  href=""
+                                  className="font-bold whitespace-nowrap"
+                                >
+                                Bitcoin
                                 </a>
                               </td>
                               <td>
