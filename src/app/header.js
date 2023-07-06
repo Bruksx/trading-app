@@ -1,6 +1,6 @@
 "use client";
 import useScrollDirection from "./hooks/scrolldirection";
-import { BsPersonCircle, BsFillFileBarGraphFill, BsLightbulb, BsFillPersonFill, BsBagFill, BsNewspaper, BsFillBookFill, BsPeopleFill, BsFillSignIntersectionSideFill } from "react-icons/bs";
+import { BsPersonCircle, BsCurrencyDollar, BsFillFileBarGraphFill, BsLightbulb, BsFillPersonFill, BsBagFill, BsNewspaper, BsFillBookFill, BsPeopleFill, BsFillSignIntersectionSideFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 
 export default function Header(props) {
@@ -30,6 +30,9 @@ export default function Header(props) {
           </a>
           <a href="/market" className="hover:text-neutral-400">
             Markets
+          </a>
+          <a href="/pricing" className="hover:text-neutral-400">
+            Pricing
           </a>
           <div className="dropdown inline-block relative">
             <button className="hover:text-neutral-400">Company</button>
@@ -81,6 +84,8 @@ export default function Header(props) {
         <nav className="mobile-menu-nav">
           <a href="/market" className="mobile_navigation" style={{ display: 'flex'}}>
            <BsFillFileBarGraphFill color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Markets</span> </a>
+           <a href="/pricing" className="mobile_navigation" style={{ display: 'flex'}}>
+           <BsCurrencyDollar color="#FC5B3F" size={18} /> <span className="inline-block pl-2">Pricing</span> </a>
           <a href="/about" className="mobile_navigation" style={{ display: 'flex'}} >
            <BsLightbulb color="#FC5B3F" size={18} />  <span className="inline-block pl-2"></span> About</a>
           <a href="/career" className="mobile_navigation" style={{ display: 'flex'}} >
