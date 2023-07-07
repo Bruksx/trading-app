@@ -18,6 +18,10 @@
     background-color: #223044;
 }
 
+.bg-custom-blue3{
+    background-color: #223044;
+}
+
 .text-custom-red{
     color: red;
 }
@@ -35,5 +39,9 @@
 }
 
 .text-custom-blue2{
-    background-color: #223044;
+    color: #223044;
+}
+
+.text-custom-blue3{
+    color:#7793bb;
 }

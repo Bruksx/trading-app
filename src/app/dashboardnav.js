@@ -26,6 +26,7 @@ export default function DashboardNav() {
         <NavItem navigateTo="/investment" title="Investment" icon={<AiOutlineFund size={24}/>}/>
         <NavItem navigateTo="/pending" title="Pending" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/history" title="History" icon={<MdOutlinePendingActions size={24}/>} />
+        <NavItem navigateTo="/pricing" title="Plans" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/profile" title="Profile" icon={<AiOutlineUser size={24}/>} />
         <NavItem navigateTo="#" title="Logout" icon={<BiLogIn size={24}/>} customClickEvent={()=>{
           localStorage.removeItem("token") 
