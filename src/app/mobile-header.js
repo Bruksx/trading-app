@@ -9,8 +9,9 @@ import {
   BsFillPersonFill,
   BsPersonDown,
 } from "react-icons/bs";
-import React, { useEffect, useState } from "react";
 import useLocalStorage from "./utils/uselocalstorage";
+import React, { useEffect, useState } from 'react';
+import { CreditCard } from 'lucide-react';
 
 export default function MobileHeader(props) {
   const [token, setToken] = useLocalStorage("token");
@@ -116,6 +117,8 @@ export default function MobileHeader(props) {
             <BsPersonDown color="#FFFFFF" size={18} />{" "}
             <span className="inline-block pl-2">Logout</span>
           </a>
+         
+
         </nav>
       </div>
     </div>
