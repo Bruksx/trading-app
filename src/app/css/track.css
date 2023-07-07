@@ -1,0 +1,9 @@
+.track-content{
+    display: flex;
+    flex-direction: column;
+}
+
+#cross{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
