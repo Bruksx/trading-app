@@ -2,13 +2,13 @@
 import Image from "next/image";
 import "../dashboard.css";
 import React, { useEffect, useState } from "react";
-import MobileHeader from "../mobile-header";
+import MobileHeader from "../components/mobile-header";
 import { FaEthereum, FaClone } from "react-icons/fa";
 import {BsCurrencyBitcoin, BsCash, BsCurrencyDollar} from "react-icons/bs";
-import DashboardNav from "../dashboardnav";
+import DashboardNav from "../components/dashboardnav";
 import API from "../utils/api";
 import Investment from "../investment/page";
-import Modal from '../Modal';
+import Modal from '../components/Modal';
 import useLocalStorage from "../utils/uselocalstorage";
 
 export default function Deposit() {

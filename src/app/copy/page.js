@@ -4,9 +4,9 @@ import "../dashboard.css";
 import "../customCalendar.css";
 import "../colors.css";
 import "../css/copytrade.css"
-import MobileHeader from "../mobile-header";
-import DashboardNav from "../dashboardnav";
-import TraderChart from "../traderchart";
+import MobileHeader from "../components/mobile-header";
+import DashboardNav from "../components/dashboardnav";
+import TraderChart from "../components/traderchart";
 import Modal from "react-modal";
 
 const customStyles = {
@@ -27,7 +27,7 @@ function openModal(setModalState, data){
 
 export default function History() {
     const [value, onChange] = useState(new Date());
-    const [modelState, setModalState] = useState(true)
+    const [modelState, setModalState] = useState(false)
   return (
     <main className="py-5">
       <Modal

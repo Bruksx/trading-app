@@ -1,4 +1,4 @@
-import "./dashboard.css";
+import "../dashboard.css";
 import {FiHome} from "react-icons/fi"
 import {AiOutlineFund} from "react-icons/ai"
 import {MdOutlinePendingActions} from "react-icons/md"
@@ -28,6 +28,7 @@ export default function DashboardNav() {
         <NavItem navigateTo="/deposit" title="Deposit" icon={<CreditCard size={24}/>}/>
         <NavItem navigateTo="/pending" title="Pending" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/history" title="History" icon={<MdOutlinePendingActions size={24}/>} />
+        <NavItem navigateTo="/copy" title="Copy Trade" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/pricing" title="Plans" icon={<MdOutlinePendingActions size={24}/>} />
         <NavItem navigateTo="/profile" title="Profile" icon={<AiOutlineUser size={24}/>} />
         <NavItem navigateTo="#" title="Logout" icon={<BiLogIn size={24}/>} customClickEvent={()=>{

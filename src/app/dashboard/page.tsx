@@ -3,8 +3,8 @@ import Image from "next/image";
 import "../dashboard.css";
 import React, { useEffect, useState } from "react";
 import { ShoppingCart, CreditCard, Monitor, User } from "lucide-react";
-import MobileHeader from "../mobile-header";
-import DashboardNav from "../dashboardnav";
+import MobileHeader from "../components/mobile-header";
+import DashboardNav from "../components/dashboardnav";
 import { MdAccountBalanceWallet, MdSavings } from "react-icons/md";
 import { useToken } from "../hooks/hooks";
 import { useRouter } from "next/navigation";
@@ -12,7 +12,7 @@ import API from "../utils/api";
 import useLocalStorage from "../utils/uselocalstorage";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
-import MyChart from "../sitestatchart";
+import MyChart from "../components/sitestatchart";
 
 export default function Dashboard() {
   const api = new API();

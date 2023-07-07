@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import useScrollDirection from "./hooks/scrolldirection";
-import "./dashboard.css";
+import useScrollDirection from "../hooks/scrolldirection";
+import "../dashboard.css";
 import {
   BsBox,
   BsGraphUp,
@@ -9,7 +9,7 @@ import {
   BsFillPersonFill,
   BsPersonDown,
 } from "react-icons/bs";
-import useLocalStorage from "./utils/uselocalstorage";
+import useLocalStorage from "../utils/uselocalstorage";
 import React, { useEffect, useState } from 'react';
 import { CreditCard } from 'lucide-react';
 

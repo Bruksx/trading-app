@@ -4,8 +4,8 @@ import Calendar from 'react-calendar';
 import "../dashboard.css";
 import "../customCalendar.css";
 import "../colors.css";
-import MobileHeader from "../mobile-header";
-import DashboardNav from "../dashboardnav";
+import MobileHeader from "../components/mobile-header";
+import DashboardNav from "../components/dashboardnav";
 
 export default function History() {
     const [value, onChange] = useState(new Date());

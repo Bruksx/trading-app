@@ -1,5 +1,5 @@
 "use client";
-import useScrollDirection from "./hooks/scrolldirection";
+import useScrollDirection from "../hooks/scrolldirection";
 import { BsPersonCircle, BsCurrencyDollar, BsFillFileBarGraphFill, BsLightbulb, BsFillPersonFill, BsBagFill, BsNewspaper, BsFillBookFill, BsPeopleFill, BsFillSignIntersectionSideFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 

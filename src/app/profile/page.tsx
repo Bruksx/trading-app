@@ -2,8 +2,8 @@
 import Image from "next/image";
 import "../dashboard.css";
 import React, { useEffect, useState } from "react";
-import MobileHeader from "../mobile-header";
-import DashboardNav from "../dashboardnav";
+import MobileHeader from "../components/mobile-header";
+import DashboardNav from "../components/dashboardnav";
 import { useFormik } from "formik";
 import API from "../utils/api";
 import { redirect } from "next/navigation";
