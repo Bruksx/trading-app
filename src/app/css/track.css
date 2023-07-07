@@ -4,6 +4,21 @@
 }
 
 #cross{
-    overflow-x: scroll;
     overflow-y: hidden;
+}
+
+.cross-crypto{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 920px){
+    .cross-crypto{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #crypto{
+        overflow-x: scroll;
+    }
 }

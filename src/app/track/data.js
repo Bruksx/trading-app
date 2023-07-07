@@ -47,7 +47,7 @@ const crossContent = {
   }
   
 const futures = {
-    "colorTheme": "light",
+    "colorTheme": "dark",
     "dateRange": "12M",
     "showChart": true,
     "locale": "en",
@@ -55,7 +55,7 @@ const futures = {
     "isTransparent": false,
     "showSymbolLogo": true,
     "showFloatingTooltip": false,
-    "width": "400",
+    "width": "330",
     "height": "660",
     "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
     "plotLineColorFalling": "rgba(41, 98, 255, 1)",
@@ -186,5 +186,15 @@ const futures = {
     ]
   }
 
+const crypto = {
+    "width": 500,
+    "height": 490,
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "colorTheme": "dark",
+    "locale": "en"
+  }
 
-export {content, crossContent, futures}
+
+export {content, crossContent, futures, crypto}

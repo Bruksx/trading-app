@@ -1,7 +1,7 @@
 "use client"
 import Dashboard from "../components/dashboard";
 import { useEffect, useRef } from "react";
-import {content, futures} from "./data";
+import {content, futures, crypto} from "./data";
 import "../css/track.css"
 
 export default function Track(){
@@ -20,11 +20,21 @@ export default function Track(){
         script2.async = true
         document.getElementById("cross")?.appendChild(script2)
     }, [])
+    useEffect(()=>{
+        const script3 = document.createElement("script")
+        script3.src = "https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+        script3.innerHTML = JSON.stringify(crypto)
+        script3.async = true
+        document.getElementById("crypto")?.appendChild(script3)
+    }, [])
     return (
         <Dashboard heading="Track">
             <div className="track-content">
                 <div id="tape"></div>
-                <div id="cross"></div>
+                <div className="cross-crypto">
+                    <div id="cross"></div>
+                    <div id="crypto"></div>
+                </div>
             </div>
         </Dashboard>
     )
