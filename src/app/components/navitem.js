@@ -1,4 +1,4 @@
-import "./dashboard.css";
+import "../dashboard.css";
 
 export default function NavItem(props){
     return (

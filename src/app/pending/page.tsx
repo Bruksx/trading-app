@@ -2,9 +2,9 @@
 import Image from "next/image";
 import "../dashboard.css";
 import React, { useEffect, useState } from "react";
-import MobileHeader from "../mobile-header";
+import MobileHeader from "../components/mobile-header";
 import { ShoppingCart, CreditCard, Monitor, User } from "lucide-react";
-import DashboardNav from "../dashboardnav";
+import DashboardNav from "../components/dashboardnav";
 import API from "../utils/api";
 import Investment from "../investment/page";
 import useLocalStorage from "../utils/uselocalstorage";

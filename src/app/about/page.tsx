@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import "../styles.css";
 import React, { useEffect, useState } from 'react';
-import Header from '../header';
-import Footer from '../Footer'
+import Header from '../components/header';
+import Footer from '../components/Footer'
 
 export default function About() {
   const [count, setCount] = useState(0);

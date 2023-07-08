@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import {BsPersonCircle} from "react-icons/bs"
-import Header from "../header";
-import Footer from "../Footer";
+import Header from "../components/header";
+import Footer from "../components/Footer";
 import "../styles.css";
 
 export default function Contact() {

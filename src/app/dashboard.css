@@ -17250,6 +17250,39 @@ html body{
 
   #hamburger-btn{
     display: block;
+  }
+
+  .statistics{
+      margin-top: 80px;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: fit-content ;
+      flex-wrap: wrap;
+  }
+
+  .progress-bar-container{
+    margin-right: 0px;
+  }
+
+  .calendar-plus-activities{
+    margin-top: 0px;
+    flex-direction: column;
+  }
+  .calendar-text{
+    padding: 0px;
+    max-width: 100%;
+  }
+  .history{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    max-width: 100%;
+    overflow-y: scroll;
+  }
 }
 
 #hamburger-btn {
@@ -17302,9 +17335,6 @@ html body{
   transition: all 0.4s ease-in-out;
 }
 
-
-}
-
 .mobile-menu-bar{
   background: #111822;
   margin-top: -10px;
@@ -17318,7 +17348,6 @@ html body{
   flex-direction: row;
   justify-content: space-around;
   width: fit-content ;
-  flex-wrap: wrap;
 }
 
 .card{
@@ -17365,6 +17394,79 @@ html body{
   width: 300px;
 }
 
+.calender{
+  background-color: #111822;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.round-dot{
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.calendar-text{
+  border-top: 1px solid #003366;
+  background-color: rgb(17, 24, 34);
+  padding: 10px;
+  width: 350px;
+}
+
+.calendar-text-item{
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-plus-activities{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.history{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 380px;
+  overflow-y: scroll;
+}
+
+.activity-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  border-radius: 5px;
+  height: 60px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+
+.activity-box > p{
+  align-self: center;
+}
+
+.activity-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #bcccdc;
+}
+
+.action{
+  color:#eef2f6;
+}
+
+.activity-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-self: center;
+}
 .deposit-block{
   flex-direction: column;
   display: flex;

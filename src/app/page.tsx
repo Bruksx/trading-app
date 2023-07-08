@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Carousel from "./Carousel";
-import Header from "./header"
-import Footer from "./Footer"
+import Carousel from "./components/Carousel";
+import Header from "./components/header"
+import Footer from "./components/Footer"
 import { useState, useEffect } from 'react';
 import "./styles.css";
 import {BsPersonCircle} from "react-icons/bs"
