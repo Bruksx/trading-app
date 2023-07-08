@@ -1,7 +1,7 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import {BsCurrencyDollar, BsFillPersonFill, BsFillHouseDoorFill} from "react-icons/bs";
-import "./modal.css";
+import "../modal.css";
 
 const Modal = ({ onClose }) => {
   return (

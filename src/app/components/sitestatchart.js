@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import PieChart from "./visitorchart";
 import getRndInteger from "../utils/rand";
 
-
+const blue = "#003d99"
+const orange = " #b34700"
+const yellow ="#b3b300"
   
 Chart.register(CategoryScale);
    
@@ -17,49 +19,35 @@ export default function MyChart() {
     const Data = [
         {
           id: 1,
-          year: "dashboard",
+          year: "",
           userGain: dashboardCount,
           userLost: 823,
-          backgroundColor:"#ff9933",
+          backgroundColor:yellow,
         },
         {
           id: 2,
-          year: "invest",
+          year: "",
           userGain: investCount,
           userLost: 345,
-          backgroundColor:"#994d00",
+          backgroundColor:blue,
         },
         {
           id: 3,
-          year: "trade",
+          year: "",
           userGain: tradeCount,
           userLost: 555,
-          backgroundColor:"#ffa64d",
+          backgroundColor:orange,
         },
-        {
-          id: 4,
-          year: "markets",
-          userGain: marketCount,
-          userLost: 4555,
-          backgroundColor:"#ff9933",
-        },
-        {
-          id: 5,
-          year: "portfolio",
-          userGain: portfolioCount,
-          userLost: 2000,
-          backgroundColor:"#994d00",
-        }
       ];
     const [chartData, setChartData] = useState({
-      labels: Data.map((data) => data.year), 
+      labels: ["", "", "", "", ""], 
       datasets: [
         {
-          label: "Site Vistors",
+          label: "",
           data: Data.map((data) => data.userGain),
           backgroundColor: Data.map((data) => data.backgroundColor),
-          borderWidth: 0,
-          barThickness:6,
+          borderColor:"#223044",
+          borderWidth:3,
         }
       ]
     });
@@ -83,11 +71,11 @@ export default function MyChart() {
                 setChartData({labels: Data.map((data) => data.year), 
                 datasets: [
                   {
-                    label: "Site Vistors",
+                    label: "",
                     data: Data.map((data) => data.userGain),
                     backgroundColor: Data.map((data) => data.backgroundColor),
-                    borderWidth: 0,
-                    barThickness:6,
+                    borderColor:"#223044",
+                    borderWidth:3,
                   }
                 ]
               })
@@ -116,11 +104,11 @@ export default function MyChart() {
                 setChartData({labels: Data.map((data) => data.year), 
                 datasets: [
                   {
-                    label: "Site Vistors",
+                    label: "",
                     data: Data.map((data) => data.userGain),
                     backgroundColor: Data.map((data) => data.backgroundColor),
-                    borderWidth: 0,
-                    barThickness:6,
+                    borderColor:"#223044",
+                    borderWidth:3,
                   }
                 ]
               })
@@ -149,11 +137,11 @@ export default function MyChart() {
                 setChartData({labels: Data.map((data) => data.year), 
                 datasets: [
                   {
-                    label: "Site Vistors",
+                    label: "",
                     data: Data.map((data) => data.userGain),
                     backgroundColor: Data.map((data) => data.backgroundColor),
-                    borderWidth: 0,
-                    barThickness:6,
+                    borderColor:"#223044",
+                    borderWidth:3,
                   }
                 ]
               })
@@ -163,8 +151,6 @@ export default function MyChart() {
         return () => clearInterval(interval);
       }, [tradeCount]);
     return (
-    <div className="App">
         <PieChart chartData={chartData} />
-    </div>
     );
   }
