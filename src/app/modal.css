@@ -1,0 +1,41 @@
+.flex-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+}
+
+.flex-modal input{
+    border: none;
+    outline: none!important;
+    color: #000;
+}
+
+.flex-modal input:focus {
+    outline: none!important;
+}
+
+.flex-modal input:active {
+    outline: none!important;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border: none;
+  }
+
+  @media (max-width: 768px){
+    .this-modal{
+        width: 90%;
+    }
+
+    .dep{
+        text-align: center;
+    }
+
+    .deposit-block{
+        width: 90%;
+        padding-left: 8px;
+        padding-right: 10px;
+    }
+  }

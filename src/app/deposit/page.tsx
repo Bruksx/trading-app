@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import "../dashboard.css";
+import '../modal.css'
 import React, { useEffect, useState } from "react";
 import MobileHeader from "../mobile-header";
 import { FaEthereum, FaClone } from "react-icons/fa";
@@ -128,7 +129,7 @@ export default function Deposit() {
                         <div className="usdt-block mt-10 mb-10">
                             <div className="mobile_navigation" style={{ display: 'flex' }}>                    
                                     <BsCurrencyDollar color="#fff" size={20} />
-                                    <span className="text inline-block pl-2">
+                                    <span className="dep text inline-block pl-2">
                                         Deposit Address: 0XIAU3340SFHSI4883BXDASOH
                                     </span>
                                     <div className={`copy-text ${isActive ? 'active' : ''}`}>
@@ -144,7 +145,7 @@ export default function Deposit() {
                         <div className="eth-block mb-10">
                             <div className="mobile_navigation" style={{ display: 'flex' }}>                    
                                     <FaEthereum color="#fff" size={20} />
-                                    <span className="text inline-block pl-2">
+                                    <span className="dep text inline-block pl-2">
                                         Deposit Address: 0XIAU3340SFHSI4883BXDASOH
                                     </span>
                                     <div className={`copy-text ${isActive1 ? 'active' : ''}`}>
@@ -160,7 +161,7 @@ export default function Deposit() {
                         <div className="btc-block mb-10">
                             <div className="mobile_navigation" style={{ display: 'flex' }}>                    
                                     <BsCurrencyBitcoin color="#fff" size={20} />
-                                    <span className="text inline-block pl-2">
+                                    <span className="dep text inline-block pl-2">
                                         Deposit Address: 0XIAU3340SFHSI4883BXDASOH
                                     </span>
                                     <div className={`copy-text ${isActive2 ? 'active' : ''}`}>
