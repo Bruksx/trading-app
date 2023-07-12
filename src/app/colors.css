@@ -10,6 +10,10 @@
     background-color:  #cccc00;
 }
 
+.bg-custom-orange{
+    background-color: #ff6600;
+}
+
 .bg-custom-blue1{
     background-color:  #111822;
 }
@@ -44,4 +48,8 @@
 
 .text-custom-blue3{
     color:#7793bb;
+}
+
+.text-custom-white{
+    color: #ffffff;
 }

@@ -1,22 +1,22 @@
 import React from "react";
-import { Pie, Bar} from "react-chartjs-2";
+import { Pie, Bar, Doughnut} from "react-chartjs-2";
 
 function PieChart({ chartData }) {
   return (
-    <div className="chart-container">
-      <Bar
+      <Doughnut
         data={chartData}
         options={{
           plugins: {
             title: {
-              display: true,
+              display: false,
               text: ""
             },
           },
           maintainAspectRatio:false,
+          cutout:"80%",
+          legend: false,
         }}
       />
-    </div>
   );
 }
 export default PieChart;

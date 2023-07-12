@@ -17253,13 +17253,26 @@ html body{
   }
 
   .statistics{
-      margin-top: 80px;
-      margin-bottom: 80px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: fit-content ;
-      flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content ;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .stat-content{
+    flex-direction: column;
+  }
+
+  .stat-content > *{
+    margin-bottom: 20px;
+  }
+
+  #TV-chart-container{
+    width: 100%;
   }
 
   .progress-bar-container{
@@ -17342,51 +17355,70 @@ html body{
 }
 
 .statistics{
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: fit-content ;
+  flex-direction: column;
+  width: 100% !important;
+}
+
+.piechart-container{
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.stat-content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.cover{
+  height: 32px;
+  width: 100%;
+  position: absolute;
+  top:0px;
+  border-radius: 10px;
 }
 
 .card{
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.progress-bar-container{
-  background-color: rgb(17, 24, 34);
-  width: 220px;
-  height: 300px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  z-index: 10;
-  position: relative;
-  margin-right: 30px;
+  height: 330px;
 }
 
-.progress-bar{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.card >p{
+  margin-top: 20px;
 }
 
-.under{
+.chart-legend{
+  display: flex;
+  flex-direction: column;
   height: 100px;
-  background-color: rgb(17, 24, 34);
-  width: 200px;
-  border-radius: 10px;
-  position: absolute;
-  bottom: -10px;
-  z-index: 0;
-  margin-right: 30px;
+}
+
+.chart-legend > div{
+  display: flex;
+  width: 130px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#TV-chart-container{
+  height: 300px;
+  width: 480px;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .chart-container{
@@ -17396,7 +17428,6 @@ html body{
 
 .calender{
   background-color: #111822;
-  border: 1px solid red;
   border-radius: 10px;
 }
 
