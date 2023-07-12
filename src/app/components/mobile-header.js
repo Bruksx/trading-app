@@ -11,7 +11,7 @@ import {
 } from "react-icons/bs";
 import useLocalStorage from "../utils/uselocalstorage";
 import React, { useEffect, useState } from 'react';
-import { CreditCard } from 'lucide-react';
+import { CreditCard, Wallet } from 'lucide-react';
 
 export default function MobileHeader(props) {
   const [token, setToken] = useLocalStorage("token");
@@ -90,20 +90,36 @@ export default function MobileHeader(props) {
             <span className="inline-block pl-2">History</span>
           </a>
           <a
-            href="/history"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsFillPersonFill color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Profile</span>
-          </a>
-          <a
             href="/pricing"
             className="mobile_navigation"
             style={{ display: "flex" }}
           >
             <BsFillPersonFill color="#FFFFFF" size={18} />{" "}
             <span className="inline-block pl-2">Plans</span>
+          </a>
+          <a
+            href="/crypto-wallet"
+            className="mobile_navigation"
+            style={{ display: "flex" }}
+          >
+            <Wallet color="#FFFFFF" size={18} />{" "}
+            <span className="inline-block pl-2">Crypto Wallet</span>
+          </a>
+          <a
+            href="/bank-details"
+            className="mobile_navigation"
+            style={{ display: "flex" }}
+          >
+            <Wallet color="#FFFFFF" size={18} />{" "}
+            <span className="inline-block pl-2">Bank Details</span>
+          </a>
+          <a
+            href="/history"
+            className="mobile_navigation"
+            style={{ display: "flex" }}
+          >
+            <BsFillPersonFill color="#FFFFFF" size={18} />{" "}
+            <span className="inline-block pl-2">Profile</span>
           </a>
           <a
             href="#"
