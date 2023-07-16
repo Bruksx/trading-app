@@ -86,7 +86,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:rgba(204, 215, 229, 0.7);
+    z-index: 10;
+    background-color: rgba(85, 120, 170, 0.5);
 }
 
 .modal-buttons{

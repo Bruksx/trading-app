@@ -22,6 +22,7 @@ export default function MainDashboard() {
   const [totalProfit, setTotalProfit] = useState(0);
   const [topTraders, setTopTraders] = useState([]);
   const [token, setToken] = useLocalStorage("token");
+  const [theme, setTheme] = useLocalStorage("theme", "dark")
   useEffect(() => {
     let data = api.dashboard(
       token,
@@ -42,7 +43,7 @@ export default function MainDashboard() {
   })
 
   return (
-    <Dashboard>
+    <Dashboard heading="Dashboard">
       <div className="col-span-12 mt-8">
         <div className="intro-y flex items-center h-10">
           <h2 className="text-lg font-medium truncate mr-5 text-custom-blue3">
