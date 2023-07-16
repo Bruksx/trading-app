@@ -7,6 +7,10 @@
     height: 100%;
     overflow-x: hidden!important;
   }
+
+  .hide-this{
+    display: none!important;
+  }
   
   body {
     background: #fff;
@@ -503,17 +507,23 @@
   flex-direction: column;
  }
 
- .mobile-menu-nav a{
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #FC5B3F;
+  .mobile-menu-nav a {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px solid #FC5B3F;
 }
 
+
  @media (max-width: 768px) {
+  .hide-this{
+    display: block!important;
+  }
+
   .pricing-section .row{
     grid-template-columns: 1fr!important;
     margin: unset!important;

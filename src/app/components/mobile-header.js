@@ -2,16 +2,10 @@
 import Image from "next/image";
 import useScrollDirection from "../hooks/scrolldirection";
 import "../dashboard.css";
-import {
-  BsBox,
-  BsGraphUp,
-  BsFillClockFill,
-  BsFillPersonFill,
-  BsPersonDown,
-} from "react-icons/bs";
+import Sidebar from '../components/side-nav';
 import useLocalStorage from "../utils/uselocalstorage";
-import React, { useEffect, useState } from 'react';
-import { CreditCard, Wallet } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 export default function MobileHeader(props) {
   const [token, setToken] = useLocalStorage("token");
@@ -27,11 +21,6 @@ export default function MobileHeader(props) {
   return (
     <div className="mobile-menu this md:hidden">
       <div className="mobile-menu-bar">
-        <div id="hamburger-btn" onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
         <a href="/" className="flex mr-auto">
           <div className="mobile-header-container flex items-center">
             <img
@@ -47,96 +36,7 @@ export default function MobileHeader(props) {
       </div>
 
       {/* Mobile menu, hidden by default */}
-      <div className={`mobile-menu nav ${showMenu ? "show" : ""}`}>
-        <nav className="mobile-menu-nav">
-          <a
-            href="/dashboard"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsBox color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Dashboard</span>
-          </a>
-          <a
-            href="/financials"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsGraphUp color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Financials</span>
-          </a>
-          <a
-            href="/investment"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsGraphUp color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Investment</span>
-          </a>
-          <a
-            href="/pending"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsFillClockFill color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Pending</span>
-          </a>
-          <a
-            href="/pending"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsFillClockFill color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">History</span>
-          </a>
-          <a
-            href="/pricing"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsFillPersonFill color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Plans</span>
-          </a>
-          <a
-            href="/crypto-wallet"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <Wallet color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Crypto Wallet</span>
-          </a>
-          <a
-            href="/bank-details"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <Wallet color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Bank Details</span>
-          </a>
-          <a
-            href="/history"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-          >
-            <BsFillPersonFill color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Profile</span>
-          </a>
-          <a
-            href="#"
-            className="mobile_navigation"
-            style={{ display: "flex" }}
-            onClick={() => {
-              setToken("");
-              window.location.href = "/"; // Redirect to Homepage'
-            }}
-          >
-            <BsPersonDown color="#FFFFFF" size={18} />{" "}
-            <span className="inline-block pl-2">Logout</span>
-          </a>
-         
-
-        </nav>
-      </div>
+      <Sidebar/>
     </div>
   );
 }
