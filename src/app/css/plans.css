@@ -1,0 +1,66 @@
+.plan{
+    width: 240px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.plans-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.plan-title{
+    font-size: larger;
+    font-weight: 600;
+}
+
+.plan-description{
+    text-align: center;
+    width: 180px;
+}
+
+.plan-button{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-price{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.plan-modal{
+    position: absolute;
+    top: 30%;
+    left: 30px;
+    right: 40px;
+    bottom: 40px;
+    background-color: #223044;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 7px;
+    width: 250px;
+    height: 220px;
+}
+
+.plan-modal-input{
+    border-radius: 10px;
+    height: 35px;
+}
+
+.plan-modal-buttons{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}

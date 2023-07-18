@@ -4,7 +4,6 @@ import "../dashboard.css";
 import "../customCalendar.css";
 import "../colors.css";
 import "../css/copytrade.css";
-import TraderChart from "../components/traderchart";
 import Modal from "react-modal";
 import Dashboard from "../components/dashboard";
 
@@ -23,18 +22,18 @@ function openModal(setModalState, data) {
   setModalState(true);
 }
 
-export default function History() {
+export default function CopyTrade() {
   const [value, onChange] = useState(new Date());
   const [modelState, setModalState] = useState(false);
   return (
-    <Dashboard heading="Copy Trade">
+    <Dashboard heading="Plans">
       <div className="all-traders">
         <Modal
           isOpen={modelState}
           style={customStyles}
           contentLabel="Example Modal"
           overlayClassName="overlay"
-          className="trader-modal"
+          className="plan-modal"
         >
           <div className="trader-details-modal">
             <div className="trader-details-modal">
@@ -72,7 +71,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2 "
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
@@ -99,7 +98,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2 "
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
@@ -126,7 +125,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2 "
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
@@ -153,7 +152,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2 "
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
@@ -180,7 +179,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2 "
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
@@ -207,7 +206,7 @@ export default function History() {
           </div>
           <div className="progress-container">
             <button
-              className="btn bg-custom-blue2"
+              className="btn bg-custom-orange text-custom-white"
               onClick={() => {
                 openModal(setModalState, {
                   image: "author-85z9UC.jpg",
